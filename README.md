@@ -4,7 +4,7 @@
   
 ### Prerequisites:
 1. Java
-2.Javascript
+2. Javascript
 3. HTML/CSS
 4. MySQL 
 
