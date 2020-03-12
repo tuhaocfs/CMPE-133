@@ -1,6 +1,13 @@
 # Chat-Room Adventure
+
   A choose-your-own-story style game where the user interacts with other characters through a chat-room display. It is a text-based game application for a single player/single account. The game itself will have a definite endinng determined by the user's choices during the game.
   
+### Prerequisites:
+1. Java
+2.Javascript
+3. HTML/CSS
+4. MySQL 
+
 ## Features
 ### Register: ###
       To access the web app, a user must have an account. New users can create their own personal accounts by entering their name, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
