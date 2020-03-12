@@ -2,7 +2,7 @@
   A choose-your-own-story style game where the user interacts with other characters through a chat-room display. It is a text-based game application for a single player/single account. The game itself will have a definite endinng determined by the user's choices during the game.
   
 ## Features
-### Register: 
+### Register: ###
       To access the web app, a user must have an account. New users can create their own personal accounts by entering their name, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
       
 ### Login: 
@@ -17,10 +17,10 @@
  - Bootstrap - Responsive, mobile-first projects on the web with the world's most popular front-end component library
 
 ## Authors:
-* **Uyen Nguyen (Leader)
-* **Brian Albert Redoloza
-* **Dhirtitapa(Risha)
-* **Yenni Lam
+* **Uyen Nguyen** (Leader)
+* **Brian Albert Redoloza**
+* **Dhirtitapa(Risha)**
+* **Yenni Lam**
 
 ## Lincense
 
