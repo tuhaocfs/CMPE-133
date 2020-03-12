@@ -1,4 +1,4 @@
-#Chat-Room Adventure
+# Chat-Room Adventure
   A choose-your-own-story style game where the user interacts with other characters through a chat-room display. It is a text-based game application for a single player/single account. The game itself will have a definite endinng determined by the user's choices during the game.
   
 ##Features
