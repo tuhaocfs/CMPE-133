@@ -1,6 +1,10 @@
+# Running the application. 
+Follow this tutorial: https://www3.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html up to 2.6 in order to run Tomcat and view HTML files running on its server. Repo currently has Windows version of Tomcat with properties set and an example HTML file under chatroom. 
+## Use http://localhost:9999/chatroom/chatroom-message.html to access the example. 
+
 # Chat-Room Adventure
 
-  A choose-your-own-story style game where the user interacts with other characters through a chat-room display. It is a text-based game application for a single player/single account. The game itself will have a definite endinng determined by the user's choices during the game.
+  A choose-your-own-story style game where the user interacts with other characters through a chat-room display. It is a text-based game application for a single player/single account. The game itself will have a definite endinng determined by the user's choices during the game. 
   
 ### Prerequisites:
 1. Java
