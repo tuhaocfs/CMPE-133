@@ -1,0 +1,22 @@
+body{
+      background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(bg.JPG);
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+    
+}
+
+.login-page{
+      width: 360px;
+      padding: 10% 0 0;
+      margin: auto;
+}
+
+.form{
+      position: relative;
+      z-index: 1;
+      /* background: #ffffff; */
+      max-width: 180px;
+      padding: 90px;
+      text-align: center;
+}
