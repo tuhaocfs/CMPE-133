@@ -26,8 +26,8 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 4. Once you are done running the application, run the command: 
 > shutdown
 5. **Do not close the terminal right away. Wait for the application to shut down before exiting.** 
-### Features
-### Register: ###
+### Application Features
+#### Register: 
       To access the web app, a user must have an account. New users can create their own personal accounts by entering their name, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
       
 #### Login: 
