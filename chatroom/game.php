@@ -259,6 +259,7 @@ input:focus{
           <form action="/action_page.php" class="form-container">
             <button type="submit" class="btn" formaction="http://localhost/chatroom/instructions.php">Instructions</button>
             <button type="submit" class="btn" formaction="http://localhost/chatroom/save.php">Save Game</button>
+            <button type="submit" class="btn" formaction="http://localhost/chatroom/welcome.php">Go Back</button>
             <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
           </form>
