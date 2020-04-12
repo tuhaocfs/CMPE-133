@@ -143,7 +143,7 @@ h4 {
   </script>
 
   <div class="flex">
-  <form action="aboutus.html" class="flex-item">
+  <form action="http://localhost/chatroom/game.php" class="flex-item">
     <button class="button">Start New Story</button>
   </form>
 
