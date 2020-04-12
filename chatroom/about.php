@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
@@ -60,7 +61,7 @@ a {
   }
 }
 
-/* Button used to open the menu */
+/*Menu Section*/
 .menu-button {
   background-color: #007BFF;
   color:white;
@@ -75,27 +76,21 @@ a {
   width: 100px;
   border-radius: 10px;
 }
-
-/* The menu */
-.form-popup {
+.form-popup {           /* The menu */
   display: none;
   position: fixed;
   top: 12%;
   right: 2%;
 }
-
-/* Add styles to the menu container */
-.form-container {
+.form-container {       /* Add styles to the menu container */
   width: 175px;
   padding: 16px 2px;
   background-color:lightgray;
   border-radius: 10px;
 }
-
-/* Set a style for the buttons in menu form */
-.form-container .btn {
+.form-container .btn {  /* Set a style for the buttons in menu form */
   background-color:#FFFFFF;
-  color: #7C7A7A;
+  color: #003D6A;
   padding: 10px 40px;
   border: none;
   width: 155px;
@@ -105,9 +100,7 @@ a {
   font-family: 'Montserrat', sans-serif;
 
 }
-
-/* Add hover effects to buttons*/
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover {  /* Add hover effects to buttons */
   opacity: 1;
 }
 </style>
@@ -120,34 +113,22 @@ a {
   <p>To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a>.</p>
 
   <button class="menu-button" onclick="openForm()">Menu</button>
-
   <div class="form-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
-
        <button type="submit" class="btn" formaction="http://localhost/chatroom/welcome.php">Welcome</button>
-       <button type="submit" class="btn" formaction="http://localhost/chatroom/login.php">Play Game</button>
-
-
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+       <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
+       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
 
   <script>
-
-
   function openForm() {
-
     document.getElementById("myForm").style.display = "block";
-
   }
-
   function closeForm() {
-
     document.getElementById("myForm").style.display = "none";
-
   }
   </script>
-
 </div>
 
 <h2 style="text-align:center">Our Team</h2>

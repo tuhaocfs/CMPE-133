@@ -1,17 +1,23 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['user'])) {
+  header('location:login.php');
+}
+?>
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Welcome</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-
-body{
+body {
   background-color: #4D4E5F;
-
+  background: url("images/backg.jpg");
 }
-/* Button used to open the menu */
+/*Menu Section*/
 .menu-button {
-  background-color:#BFBDBD;
+  background-color: #007BFF;
   color:white;
   font-weight: bold;
   font-size: 12px;
@@ -19,115 +25,132 @@ body{
   padding:16px 2px;
   cursor: pointer;
   position: fixed;
-  top: 2%;
+  top: 5%;
   right: 2%;
   width: 100px;
   border-radius: 10px;
 }
-
-/* The menu */
-.form-popup {
+.form-popup {           /* The menu */
   display: none;
   position: fixed;
-  top: 9%;
+  top: 12%;
   right: 2%;
 }
-
-
-/* Add styles to the menu container */
-.form-container {
+.form-container {       /* Add styles to the menu container */
   width: 175px;
   padding: 16px 2px;
   background-color:lightgray;
   border-radius: 10px;
 }
-
-
-
-
-/* Set a style for the buttons in menu form */
-.form-container .btn {
+.form-container .btn {  /* Set a style for the buttons in menu form */
   background-color:#FFFFFF;
-  color: #7C7A7A;
+  color: #003D6A;
   padding: 10px 40px;
   border: none;
-  width: 150px;
+  width: 155px;
   display: block;
   margin: 10px;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
 
 }
-
-
-
-/* Add hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover {  /* Add hover effects to buttons */
   opacity: 1;
 }
 
-h4 {
-text-align: center;
-line-height: 320px;
-font-size: 50px;
-font-family: 'Montserrat', sans-serif;
-color: white;
-}
-
-h5{
-
+/*H5 Animation*/
+h5 {
   text-align: center;
   font-size: 50px;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  border-right: solid 5px rgb(255,255,255);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  animation: animated-text 4s steps(29,end) 0s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+@keyframes animated-text{ /*text animation*/
+  from{width: 0px;}
+  to{width: 730px;}
+}
+@keyframes animated-cursor{ /* cursor animations */
+  from{border-right-color: rgb(255,255,255);}
+  to{border-right-color: transparent;}
 }
 
-h1{
-font-size: 15px;
+.flex {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
 
+.flex-item + .flex-item {
+  margin-left: 50px;
 }
-h2{
-font-size: 15px
+
+.button {
+  margin-top: 50px;
+  background-color: #0066FF;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  cursor: pointer;
 }
-h3{
-font-size: 15px
+
+/*Misc*/
+h4 {
+  margin: 20px auto auto 0px;
+  margin-bottom: -50px;
+  padding: 0;
+  text-align: center;
+  line-height: 300px;
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 </style>
+
 </head>
 <body>
+  <h4>Welcome, <?php echo $_SESSION['user']; ?>.</h4>
+  <h5>Choose how your story ends.</h5>
 
-<h4>Welcome</h4>
-<h5> Choose your story </h5>
+  <button class="menu-button" onclick="openForm()">Menu</button>
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <button type="submit" class="btn" formaction="http://localhost/chatroom/instructions.php">Instructions</button>
+      <button type="submit" class="btn" formaction="http://localhost/chatroom/about.php">About Us</button>
+      <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
 
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
 
-<button class="menu-button" onclick="openForm()">Menu</button>
+  <div class="flex">
+  <form action="aboutus.html" class="flex-item">
+    <button class="button">Start New Story</button>
+  </form>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-
-     <button type="submit" class="btn" formaction="http://localhost/chatroom/about.php">About Us</button>
-     <button type="submit" class="btn" formaction="http://localhost/chatroom/login.php">Play Game</button>
-
-
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  <form action="end.html" class="flex-item">
+    <button class="button">Continue Story</button>
   </form>
 </div>
-
-<script>
-
-
-function openForm() {
-
-  document.getElementById("myForm").style.display = "block";
-
-}
-
-function closeForm() {
-
-  document.getElementById("myForm").style.display = "none";
-
-}
-</script>
 
 </body>
 </html>
