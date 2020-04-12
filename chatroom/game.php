@@ -124,8 +124,14 @@ insertChat("you", "LOL", 12000);
     float:left;background:white;
 }
 .frame{
+    position: absolute;
+    left: 30%;
+    margin-left: -190px;
     background:#e0e0de;
-    height:450px;
+    width: 1000px;
+    height:650px;
+    margin-top:90px;
+    margin-bottom:10px;
     overflow:hidden;
     padding:0;
 }
@@ -186,6 +192,49 @@ input:focus{
 :-moz-placeholder { /* Firefox 18- */
     color: #d4d4d4;
 }
+
+/*Menu Section*/
+.menu-button {
+  background-color: #007BFF;
+  color:white;
+  font-weight: bold;
+  font-size: 12px;
+  width: 100px;
+  padding:16px 2px;
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  width: 100px;
+  border-radius: 10px;
+}
+.form-popup {           /* The menu */
+  display: none;
+  position: fixed;
+  top: 12%;
+  right: 2%;
+}
+.form-container {       /* Add styles to the menu container */
+  width: 175px;
+  padding: 16px 2px;
+  background-color:lightgray;
+  border-radius: 10px;
+}
+.form-container .btn {  /* Set a style for the buttons in menu form */
+  background-color:#FFFFFF;
+  color: #003D6A;
+  padding: 10px 40px;
+  border: none;
+  width: 155px;
+  display: block;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.form-container .btn:hover, .open-button:hover {  /* Add hover effects to buttons */
+  opacity: 1;
+}
 </style>
 
 <!DOCTYPE html>
@@ -205,5 +254,23 @@ input:focus{
                 </div>
             </div>
         </div>
+        <button class="menu-button" onclick="openForm()">Menu</button>
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <button type="submit" class="btn" formaction="http://localhost/chatroom/instructions.php">Instructions</button>
+            <button type="submit" class="btn" formaction="http://localhost/chatroom/save.php">Save Game</button>
+            <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+
+        <script>
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+        </script>
     </body>
 </html>
