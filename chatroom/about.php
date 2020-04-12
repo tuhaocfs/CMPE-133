@@ -62,7 +62,7 @@ a {
 
 /* Button used to open the menu */
 .menu-button {
-  background-color:#BFBDBD;
+  background-color: #007BFF;
   color:white;
   font-weight: bold;
   font-size: 12px;
@@ -70,7 +70,7 @@ a {
   padding:16px 2px;
   cursor: pointer;
   position: fixed;
-  top: 2%;
+  top: 5%;
   right: 2%;
   width: 100px;
   border-radius: 10px;
@@ -80,7 +80,7 @@ a {
 .form-popup {
   display: none;
   position: fixed;
-  top: 9%;
+  top: 12%;
   right: 2%;
 }
 
@@ -98,7 +98,7 @@ a {
   color: #7C7A7A;
   padding: 10px 40px;
   border: none;
-  width: 150px;
+  width: 155px;
   display: block;
   margin: 10px;
   border-radius: 10px;

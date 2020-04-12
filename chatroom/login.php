@@ -5,7 +5,7 @@
 </head>
 <style>
 body {
-  background: url("images/bg.jpg");
+  background: url("images/backg.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -13,17 +13,21 @@ body {
 .login-box {
   max-width: 700px;
   float: none;
-  margin: 150px auto;
+  margin: 190px 250px auto;
 }
 
 .login-left {
   background: rgba(211, 211, 211, 0.5);
-  padding: 30px;
+  padding: 50px;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
 }
 
 .login-right {
   background: #fff;
-  padding: 30px;
+  padding: 50px;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 .form-control {
@@ -41,7 +45,7 @@ h1 {
 }
 
 .menu-button {
-  background-color:#BFBDBD;
+  background-color: #007BFF;
   color:white;
   font-weight: bold;
   font-size: 12px;
@@ -49,7 +53,7 @@ h1 {
   padding:16px 2px;
   cursor: pointer;
   position: fixed;
-  top: 2%;
+  top: 5%;
   right: 2%;
   width: 100px;
   border-radius: 10px;
@@ -59,7 +63,7 @@ h1 {
 .form-popup {
   display: none;
   position: fixed;
-  top: 9%;
+  top: 12%;
   right: 2%;
 }
 
@@ -72,16 +76,13 @@ h1 {
   border-radius: 10px;
 }
 
-
-
-
 /* Set a style for the buttons in menu form */
 .form-container .btn {
   background-color:#FFFFFF;
-  color: #7C7A7A;
+  color: #003D6A;
   padding: 10px 40px;
   border: none;
-  width: 150px;
+  width: 155px;
   display: block;
   margin: 10px;
   border-radius: 10px;
