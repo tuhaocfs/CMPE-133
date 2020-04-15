@@ -1,3 +1,4 @@
+<!-- Instructions code based on https://www.w3schools.com/w3css/w3css_templates.asp-->
 <!DOCTYPE html>
 <html>
 <title>How to Play</title>

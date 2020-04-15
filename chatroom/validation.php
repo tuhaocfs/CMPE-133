@@ -1,4 +1,5 @@
 <?php
+// validation code based on https://www.youtube.com/watch?v=NXAHkqiIepc
 
 session_start();
 

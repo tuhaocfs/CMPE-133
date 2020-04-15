@@ -1,3 +1,6 @@
+<!-- login code based on https://www.youtube.com/watch?v=NXAHkqiIepc -->
+<!-- H5 animation code based on https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/ -->
+
 <html>
 <head>
         <title>User Login and Registration</title>

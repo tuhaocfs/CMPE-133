@@ -1,10 +1,12 @@
 <?php
-
+// welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
 session_start();
 if (!isset($_SESSION['user'])) {
   header('location:login.php');
 }
 ?>
+
+<!-- H5 animation code based on https://www.codesdope.com/blog/article/creating-typewriter-text-animation-using-css/ -->
 <html>
 <head>
         <title>Welcome</title>
