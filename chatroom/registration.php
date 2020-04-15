@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-header('location:login.php');
+
 $con = mysqli_connect('localhost', 'root', 'rybu1');
 
 mysqli_select_db($con, 'registration');
@@ -11,19 +11,21 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $pass = $_POST['password'];
 
-$s = " SELECT * FROM user_table WHERE name = '$name'";
+$u = " SELECT * FROM user_table WHERE uname = '$uname'";
+$e = " SELECT * FROM user_table WHERE email = '$email'";
 
-$result = mysqli_query($con, $s);
-$num = mysqli_num_rows($result);
+$ru = mysqli_query($con, $u);
+$re = mysqli_query($con, $e);
+$numu = mysqli_num_rows($ru);
+$nume = mysqli_num_rows($re);
 
-if ($num == 1) {
-  echo" The username is already taken.";
+if ($numu == 1 || $nume == 1) {
+  echo" <script> alert('Looks like that username and/or email already exists. Please try again with new credentials.'); window.location.href ='http://localhost/chatroom/login.php'</script>";
 }
 else {
   $reg = " INSERT INTO user_table (uname, name, email, password) VALUES ('$uname', '$name','$email','$pass')";
   mysqli_query($con, $reg);
-  echo" Registation successful.";
-  header("Location: home.php");
+  echo" <script> alert('Registration successful!'); window.location.href ='http://localhost/chatroom/login.php'</script>";
 }
 
 ?>

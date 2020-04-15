@@ -8,20 +8,23 @@ mysqli_select_db($con, 'registration');
 
 $uname = $_POST['user'];
 $pass = $_POST['password'];
-$name = $_POST['name'];
+//$name = $_POST['name'];
 
-$s = " SELECT * FROM user_table WHERE uname = '$uname'";
+$u = " SELECT * FROM user_table WHERE uname = '$uname'";
+$p = " SELECT * FROM user_table WHERE password = '$pass'";
 
-$result = mysqli_query($con, $s);
-$playname = mysqli_query($con, $n);
-$num = mysqli_num_rows($result);
+$ru = mysqli_query($con, $u);
+$rp = mysqli_query($con, $p);
+$numu = mysqli_num_rows($ru);
+$nump = mysqli_num_rows($rp);
 
-if ($num == 1) {
+if ($numu == 1 && $nump == 1) {
   $_SESSION['user'] = $uname;
   header('location:welcome.php');
 }
+
 else {
-  header('location:login.php');
+  echo" <script> alert('Incorrect username and/or password. Please try again.'); window.location.href ='http://localhost/chatroom/login.php'</script>";
 }
 
 ?>
