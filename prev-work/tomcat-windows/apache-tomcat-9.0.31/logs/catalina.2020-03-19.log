@@ -1,0 +1,172 @@
+19-Mar-2020 12:08:04.380 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.31
+19-Mar-2020 12:08:04.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 5 2020 19:32:12 UTC
+19-Mar-2020 12:08:04.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.31.0
+19-Mar-2020 12:08:04.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Mar-2020 12:08:04.590 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Java\jre1.8.0_241
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_241-b07
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 12:08:04.591 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\conf\logging.properties
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Mar-2020 12:08:04.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 12:08:04.593 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 12:08:04.594 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\temp
+19-Mar-2020 12:08:04.595 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Java\jdk-13.0.2\bin;C:\zookeeper-3.6.0\bin;C:\Users\carol\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\carol\AppData\Local\Programs\Python\Python38\;C:\Users\carol\AppData\Local\Microsoft\WindowsApps;C:\Users\carol\AppData\Local\atom\bin;C:\Users\carol\AppData\Local\GitHubDesktop\bin;.]
+19-Mar-2020 12:08:05.735 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 12:08:07.255 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [3,386] milliseconds
+19-Mar-2020 12:08:07.573 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Mar-2020 12:08:07.574 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.31]
+19-Mar-2020 12:08:07.592 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom]
+19-Mar-2020 12:08:08.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom] has finished in [496] ms
+19-Mar-2020 12:08:08.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs]
+19-Mar-2020 12:08:08.127 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs] has finished in [38] ms
+19-Mar-2020 12:08:08.128 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples]
+19-Mar-2020 12:08:10.474 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples] has finished in [2,346] ms
+19-Mar-2020 12:08:10.474 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager]
+19-Mar-2020 12:08:10.580 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager] has finished in [106] ms
+19-Mar-2020 12:08:10.581 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager]
+19-Mar-2020 12:08:10.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager] has finished in [84] ms
+19-Mar-2020 12:08:10.664 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT]
+19-Mar-2020 12:08:10.710 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT] has finished in [45] ms
+19-Mar-2020 12:08:10.717 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 12:08:10.730 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [3,474] milliseconds
+19-Mar-2020 13:49:42.237 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Mar-2020 13:49:42.240 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 13:49:42.469 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Mar-2020 13:49:42.522 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 13:49:42.526 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 15:12:08.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.31
+19-Mar-2020 15:12:08.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 5 2020 19:32:12 UTC
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.31.0
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Java\jre1.8.0_241
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_241-b07
+19-Mar-2020 15:12:08.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Mar-2020 15:12:08.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 15:12:08.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\conf\logging.properties
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Mar-2020 15:12:08.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 15:12:08.315 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 15:12:08.318 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\temp
+19-Mar-2020 15:12:08.319 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Java\jdk-13.0.2\bin;C:\zookeeper-3.6.0\bin;C:\Users\carol\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\carol\AppData\Local\Programs\Python\Python38\;C:\Users\carol\AppData\Local\Microsoft\WindowsApps;C:\Users\carol\AppData\Local\atom\bin;C:\Users\carol\AppData\Local\GitHubDesktop\bin;.]
+19-Mar-2020 15:12:08.797 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 15:12:09.120 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1,133] milliseconds
+19-Mar-2020 15:12:09.179 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Mar-2020 15:12:09.180 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.31]
+19-Mar-2020 15:12:09.199 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom]
+19-Mar-2020 15:12:09.780 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom] has finished in [581] ms
+19-Mar-2020 15:12:09.781 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs]
+19-Mar-2020 15:12:09.839 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs] has finished in [58] ms
+19-Mar-2020 15:12:09.841 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples]
+19-Mar-2020 15:12:11.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples] has finished in [2,022] ms
+19-Mar-2020 15:12:11.864 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager]
+19-Mar-2020 15:12:11.977 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager] has finished in [113] ms
+19-Mar-2020 15:12:11.978 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager]
+19-Mar-2020 15:12:12.049 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager] has finished in [71] ms
+19-Mar-2020 15:12:12.049 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT]
+19-Mar-2020 15:12:12.093 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT] has finished in [44] ms
+19-Mar-2020 15:12:12.098 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 15:12:12.109 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2,985] milliseconds
+19-Mar-2020 15:48:49.975 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Mar-2020 15:48:49.977 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 15:48:50.202 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Mar-2020 15:48:50.224 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 15:48:50.228 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:31:13.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.31
+19-Mar-2020 22:31:13.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 5 2020 19:32:12 UTC
+19-Mar-2020 22:31:13.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.31.0
+19-Mar-2020 22:31:13.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Mar-2020 22:31:13.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Java\jre1.8.0_241
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_241-b07
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:31:13.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:31:13.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\conf\logging.properties
+19-Mar-2020 22:31:13.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Mar-2020 22:31:13.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Mar-2020 22:31:13.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Mar-2020 22:31:13.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Mar-2020 22:31:13.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:31:13.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:31:13.039 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\temp
+19-Mar-2020 22:31:13.040 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Java\jdk-13.0.2\bin;C:\zookeeper-3.6.0\bin;C:\Users\carol\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\carol\AppData\Local\Programs\Python\Python38\;C:\Users\carol\AppData\Local\Microsoft\WindowsApps;C:\Users\carol\AppData\Local\atom\bin;C:\Users\carol\AppData\Local\GitHubDesktop\bin;.]
+19-Mar-2020 22:31:13.628 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:31:13.910 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1,278] milliseconds
+19-Mar-2020 22:31:13.999 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Mar-2020 22:31:13.999 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.31]
+19-Mar-2020 22:31:14.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom]
+19-Mar-2020 22:31:14.584 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom] has finished in [573] ms
+19-Mar-2020 22:31:14.585 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs]
+19-Mar-2020 22:31:14.631 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs] has finished in [46] ms
+19-Mar-2020 22:31:14.632 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples]
+19-Mar-2020 22:31:17.529 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples] has finished in [2,897] ms
+19-Mar-2020 22:31:17.530 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager]
+19-Mar-2020 22:31:17.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager] has finished in [188] ms
+19-Mar-2020 22:31:17.719 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager]
+19-Mar-2020 22:31:17.824 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager] has finished in [105] ms
+19-Mar-2020 22:31:17.825 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT]
+19-Mar-2020 22:31:17.896 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT] has finished in [70] ms
+19-Mar-2020 22:31:17.901 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:31:17.915 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [4,004] milliseconds
+19-Mar-2020 22:32:04.875 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Mar-2020 22:32:04.876 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:32:05.096 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Mar-2020 22:32:05.139 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:32:05.142 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:32:15.767 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.31
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 5 2020 19:32:12 UTC
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.31.0
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Mar-2020 22:32:15.770 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Java\jre1.8.0_241
+19-Mar-2020 22:32:15.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_241-b07
+19-Mar-2020 22:32:15.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Mar-2020 22:32:15.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:32:15.771 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:32:15.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\conf\logging.properties
+19-Mar-2020 22:32:15.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Mar-2020 22:32:15.772 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Mar-2020 22:32:15.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Mar-2020 22:32:15.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Mar-2020 22:32:15.773 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:32:15.774 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31
+19-Mar-2020 22:32:15.775 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\temp
+19-Mar-2020 22:32:15.776 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Java\jdk-13.0.2\bin;C:\zookeeper-3.6.0\bin;C:\Users\carol\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\carol\AppData\Local\Programs\Python\Python38\;C:\Users\carol\AppData\Local\Microsoft\WindowsApps;C:\Users\carol\AppData\Local\atom\bin;C:\Users\carol\AppData\Local\GitHubDesktop\bin;.]
+19-Mar-2020 22:32:16.105 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:32:16.410 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [877] milliseconds
+19-Mar-2020 22:32:16.450 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Mar-2020 22:32:16.450 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.31]
+19-Mar-2020 22:32:16.464 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom]
+19-Mar-2020 22:32:16.817 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom] has finished in [353] ms
+19-Mar-2020 22:32:16.818 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs]
+19-Mar-2020 22:32:16.853 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\docs] has finished in [35] ms
+19-Mar-2020 22:32:16.854 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples]
+19-Mar-2020 22:32:17.302 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\examples] has finished in [448] ms
+19-Mar-2020 22:32:17.302 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager]
+19-Mar-2020 22:32:17.349 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\host-manager] has finished in [47] ms
+19-Mar-2020 22:32:17.350 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager]
+19-Mar-2020 22:32:17.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\manager] has finished in [38] ms
+19-Mar-2020 22:32:17.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT]
+19-Mar-2020 22:32:17.424 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\carol\Documents\CMPE-133\tomcat-windows\apache-tomcat-9.0.31\webapps\ROOT] has finished in [35] ms
+19-Mar-2020 22:32:17.430 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:32:17.440 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1,028] milliseconds
+19-Mar-2020 22:34:17.061 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Mar-2020 22:34:17.061 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:34:17.263 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Mar-2020 22:34:17.295 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9999"]
+19-Mar-2020 22:34:17.300 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9999"]
