@@ -110,7 +110,8 @@ a {
 
 <div class="about-section">
   <h1>About Us</h1>
-  <p>Our web application is a class project for our Software Engineering II class (CMPE 133)</p>
+  <p>Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133).</p>
+  <p>This class project involves creating any web application of choice using any language and operating system platform.</p>
   <p>To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a>.</p>
 
   <button class="menu-button" onclick="openForm()">Menu</button>
@@ -173,7 +174,7 @@ a {
 
 <div class="column">
   <div class="card">
-    <img src="images/default.jpg" alt="uyen" style="width:100%">
+    <img src="images/profile-uyen.jpg" alt="uyen" style="width:100%">
     <div class="container">
       <h2>Uyen Nguyen</h2>
       <p class="title">Team Member</p>
