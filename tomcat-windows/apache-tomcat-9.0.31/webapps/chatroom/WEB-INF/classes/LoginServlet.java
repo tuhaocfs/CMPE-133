@@ -11,32 +11,42 @@ public class LoginServlet extends HttpServlet{
   //   super();
   // }
 
-  @Override
+  // @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException{
       // HTTP session = request.getSession();
-      String username = request.getParameter("name");
-      String password = request.getParameter("pass");
+      String user = request.getParameter("EnterU");
+      // String pass = request.getParameter("Enter password");
 
-      Connection conn = DriverManager.getConnection(
-          "jdbc:mysql://localhost:9999/gamebase?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC",
-          "user1", "4444");   // For MySQL
-           // The format is: "jdbc:mysql://hostname:port/databaseName", "username", "password"
+      try (
+        Connection conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/gamebase",
+            "user1", "4444");   // For MySQL
+             // The format is: "jdbc:mysql://hostname:port/databaseName", "username", "password"
 
-      Statement stmt = conn.createStatement();
+        // Statement stmt = conn.createStatement();
 
+        PreparedStatement upd = conn.prepareStatement("SELECT * FROM data username=?;");
+        // upd.setString(1,user.getText());
+      ) {
+        ResultSet rs = upd.executeQuery();
+        // upd.executeQuery();
+        // ResultSet rs = upd.getResultSet();
 
+        // response.sendRedirect("http://localhost:9999/chatroom/homepage.html");
 
-      response.sendRedirect("http://localhost:9999/chatroom/homepage.html");
+        // while(rs.next()){
+        //   String checkUser = rs.getString("username");
+        //   // String checkPass = rs.getString("password");
+        //   if (user.equals(checkUser)) {
+            response.sendRedirect("homepage.html");
+        //     break;
+        //   }
+        // }
+        // response.sendRedirect("http://localhost:9999/chatroom/login-create.html");
+      } catch (Exception ex) {
+        ex.printStackTrace();
+      }
   }
 
-  // public void doPost(HttpServletRequest request, HttpServletResponse response)
-  //   throws ServletException, IOException{
-  //   doGet(request, response);
-  //
-    // String username = request.getParameter("");
-    // String password = request.getParameter("");
-  //
-  //   response.sendRedirect("http://localhost:9999/chatroom/homepage.html");
-  // }
 }
