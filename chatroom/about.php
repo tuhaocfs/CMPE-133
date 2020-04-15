@@ -149,7 +149,7 @@ a {
 
   <div class="column">
     <div class="card">
-      <img src="images/default.jpg" alt="risha" style="width:100%">
+      <img src="images/profile-risha.jpg" alt="risha" style="width:100%">
       <div class="container">
         <h2>Risha Ray</h2>
         <p class="title">Team Member</p>
