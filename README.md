@@ -15,20 +15,20 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 * The game's story is engaging for the user
 #### More information regarding our requirements and documentation can be found under the folder project-slides
 ### Set-Up
-1. Verify that tomcat can be run by your computer. The current folder for tomcat only works for windows. 
-2. All HTML files are located under the chatroom directory (tomcat-windows\apache-tomcat-9.0.31\webapps\chatroom). 
-3. For more details on how Tomcat works, click on https://www3.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html. 
+#### WAMP
+1. Verify that WAMP can be run by your computer and other applications such as MySQL is installed. WAMP has a specific installation file that is used to create this project, which also includes the necessary files to run PHP and PHPMySQL. To download the installation, click here:  https://drive.google.com/file/d/1YxdX46Fg1r60G5W481L4OHzjEuB7mFrZ/view?usp=sharing. 
+2. Run the WAMP server and place the chatroom folder from the repository into the wamp64/www directory. 
+#### XAMPP
+1. For XAMPP, [insert set up for XAMPP]
 ### How To Run The Project
-1. Open up the terminal. 
-2. Go into the bin directory of tomcat (tomcat-windows\apache-tomcat-9.0.31\bin) and run the command:
-> startup
-3. Go to http://localhost:9999/chatroom/homepage.html
-4. Once you are done running the application, run the command: 
-> shutdown
+1. Make sure the server is running. 
+2. Go to http://localhost/chatroom/login.php to view the application. 
+3. Go to http://localhost/phpmyadmin/ to view the MySQL database. To log into the root, see the credentials in the registration.php file. 
+4. Once you are done running the application, simply shut down the server. 
 5. **Do not close the terminal right away. Wait for the application to shut down before exiting.** 
 ### Application Features
 #### Register: 
-      To access the web app, a user must have an account. New users can create their own personal accounts by entering their name, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
+      To access the web app, a user must have an account. New users can create their own personal accounts by entering their username, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
       
 #### Login: 
       Existing users who have made accounts can log into the web app to access its features. Once a user is logged in, they are redirected to the homepage where they will be able to access to the chat-room.
@@ -40,6 +40,7 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
  - Java : An interpreted, high-level, general-purpose programming language.
  - JQuery - A fast, small, and feature-rich JavaScript library.
  - Bootstrap - Responsive, mobile-first projects on the web with the world's most popular front-end component library
+ - PHP: A general-purpose scripting language that is especially suited to web development. 
 
 ## License
 
