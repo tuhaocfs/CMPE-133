@@ -13,7 +13,7 @@ if (!isset($_SESSION['user'])) {
 <style>
 body {
   background-color: #4D4E5F;
-  background: url("images/backg.jpg");
+  background: url("images/bg2.jpg");
 }
 /*Menu Section*/
 .menu-button {

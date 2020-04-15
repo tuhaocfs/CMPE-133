@@ -5,7 +5,7 @@
 </head>
 <style>
 body {
-  background: url("images/backg.jpg");
+  background: url("images/bg2.jpg");
   background-size: cover;
   background-position: center;
 }

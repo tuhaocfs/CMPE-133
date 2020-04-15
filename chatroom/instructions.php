@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
   header {
-    background: url("images/backg.jpg");
+    background: url("images/bg2.jpg");
   }
   a {
     color: #003D6A;
