@@ -65,6 +65,16 @@ h5 {
   from{border-right-color: rgb(255,255,255);}
   to{border-right-color: transparent;}
 }
+
+button {
+	background-color: #021631 !important;
+  border-color: #021631 !important;
+}
+
+button:hover {
+	background-color: #002B79 !important;
+  border-color: #002B79 !important;
+}
 </style>
 
 <body>
