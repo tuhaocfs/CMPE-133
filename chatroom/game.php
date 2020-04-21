@@ -4,11 +4,27 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <script>
+// scripts to be filled in
+var aCount = 0;
+var bCount = 0;
+var nullCount = 0;
+var episodes = 0;
+var gameScript = ["Hello, [insert name]. Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
+"As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
+"Well, I’m sure you’ll be a pro at this in no time. I look forward to seeing how well you work."];
+var playerScriptA = ["I like it. I think this is efficient.", "Going well. Happy to contribute."];
+var playerScriptB = ["It seems a little impersonal...", "It’s hard to keep up sometimes."];
+var gameEndingA = [];
+var gameEndingB = [];
+var playerEndingA = [];
+var playerEndingB = [];
+var part = 0;
+
 var me = {};
-me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
+me.avatar = "images/default.jpg";
 
 var you = {};
-you.avatar = "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg";
+you.avatar = "images/default.jpg";
 
 function formatAMPM(date) {
     var hours = date.getHours();
@@ -58,6 +74,10 @@ function insertChat(who, text, time){
 
 function resetChat(){
     $("ul").empty();
+    // currently set to zero for debug
+    aCount = 0;
+    bCount = 0;
+    part = 0;
 }
 
 $(".mytext").on("keydown", function(e){
@@ -78,20 +98,46 @@ $('body > div > div > div:nth-child(2) > span').click(function(){
 resetChat();
 
 //-- Print Messages
-insertChat("me", "Hello Tom...", 0);
-insertChat("you", "Hi, Pablo", 1500);
+var n = 500;
+for (var i = 0; i < gameScript.length; i++) {
+  insertChat("me", gameScript[i], n);
+  n = n + 1000;
+}
+/*insertChat("you", playerScriptA[0], 1800);
+insertChat("me", gameScript[0], 500);
+insertChat("me", "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.", 1500);
+
 insertChat("me", "What would you like to talk about today?", 3500);
 insertChat("you", "Tell me a joke",7000);
 insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
 insertChat("you", "LOL", 12000);
+insertChat("me", "Hello Tom...", 13500);*/
 
 
+function myFunction(elem) {
+      switch(elem.id) {
+        case '1':
+          insertChat("you", playerScriptA[part], 0);
+          aCount++;
+          document.getElementById("demo1").innerHTML = "A count: " + aCount; // check how many times button is clicked. located when clicked on menu
+        break;
+
+        case '2':
+          insertChat("you", playerScriptB[part], 0);
+          bCount++;
+          document.getElementById("demo2").innerHTML = "B count: " + bCount; // check how many times button is clicked located
+        break;
+     }
+     part++;
+}
+//document.getElementById("demo").innerHTML = aCount;
+//document.getElementById("demo2").innerHTML = bCount;
 //-- NOTE: No use time on insertChat.
 </script>
 <style>
-.mytext{
+/*.mytext{
     border:0;padding:10px;background:whitesmoke;
-}
+}*/
 .text{
     width:75%;display:flex;flex-direction:column;
 }
@@ -105,7 +151,8 @@ insertChat("you", "LOL", 12000);
     float:left;padding-right:10px;
 }
 .text-r{
-    float:right;padding-left:10px;
+    float:right;
+    padding-left:10px;
 }
 .avatar{
     display:flex;
@@ -246,9 +293,13 @@ input:focus{
             <div>
                 <div class="msj-rta macro">
                     <div class="text text-r" style="background:whitesmoke !important">
-                        <input class="mytext" placeholder="Type a message"/>
-                    </div>
+                      <!--Needs to be altered to display scripts, fit into page, and only continue game script once clicked-->
+                        <button id='1' onclick="myFunction(this)">button 1</button>
+                        <button id='2' onclick="myFunction(this)">button 2</button>
 
+                        <!--input class="mytext" placeholder="Type a message"/-->
+
+                    </div>
                 </div>
                 <div style="padding:10px;">
                     <span class="glyphicon glyphicon-share-alt"></span>
@@ -264,6 +315,9 @@ input:focus{
             <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
           </form>
+          <!--Display game count-->
+                <p id="demo1"></p>
+                <p id="demo2"></p>
         </div>
 
         <script>
@@ -274,5 +328,6 @@ input:focus{
             document.getElementById("myForm").style.display = "none";
           }
         </script>
+
     </body>
 </html>
