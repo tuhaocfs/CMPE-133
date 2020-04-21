@@ -4,10 +4,13 @@
 <head>
         <title>About Us</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
 <style>
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  overflow-x:hidden;
 }
 
 html {
@@ -31,10 +34,17 @@ html {
 }
 
 .about-section {
-  padding: 50px;
+  padding: 100px;
+  padding-bottom: 50px;
   text-align: center;
-  background-color: #003D6A;
+  background-color: #021631;
+  background: url("images/about-bg.jpg");
   color: white;
+}
+
+.about-text {
+  padding: 70px;
+  background-color: rgba(0,12,38, 0.6);
 }
 
 .container {
@@ -61,79 +71,44 @@ a {
     display: block;
   }
 }
-
-/*Menu Section*/
-.menu-button {
-  background-color: #007BFF;
-  color:white;
-  font-weight: bold;
-  font-size: 12px;
-  width: 100px;
-  padding:16px 2px;
-  cursor: pointer;
-  position: fixed;
-  top: 5%;
-  right: 2%;
-  width: 100px;
-  border-radius: 10px;
-}
-.form-popup {           /* The menu */
-  display: none;
-  position: fixed;
-  top: 12%;
-  right: 2%;
-}
-.form-container {       /* Add styles to the menu container */
-  width: 175px;
-  padding: 16px 2px;
-  background-color:lightgray;
-  border-radius: 10px;
-}
-.form-container .btn {  /* Set a style for the buttons in menu form */
-  background-color:#FFFFFF;
-  color: #003D6A;
-  padding: 10px 40px;
-  border: none;
-  width: 155px;
-  display: block;
-  margin: 10px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-
-}
-.form-container .btn:hover, .open-button:hover {  /* Add hover effects to buttons */
-  opacity: 1;
-}
 </style>
-</head>
 <body>
-
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #021631 !important;">
+    <div class="container">
+      <a class="navbar-brand" href="#">Chatroom Adventures</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/chatroom/welcome.php">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost/chatroom/logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <div class="about-section">
-  <h1>About Us</h1>
-  <p>Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133).</p>
-  <p>This class project involves creating any web application of choice using any language and operating system platform.</p>
-  <p>To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a>.</p>
-
-  <button class="menu-button" onclick="openForm()">Menu</button>
-  <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-       <button type="submit" class="btn" formaction="http://localhost/chatroom/welcome.php">Welcome</button>
-       <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
-       <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
+  <div class="about-text">
+    <h1 style="font-size: 70px;">About Us</h1>
+    <p style="font-size:20px;">Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133)<br>.
+      This class project involves creating any web application of choice using any language and operating system platform.<br>
+      To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a></p>
   </div>
-
-  <script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-  </script>
 </div>
 
-<h2 style="text-align:center">Our Team Members</h2>
+<h2 style="text-align:center; padding-top: 20px;">Our Team Members</h2>
 <div class="row">
   <div class="column">
     <div class="card">
