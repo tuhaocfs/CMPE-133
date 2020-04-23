@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>About Us</title>
+        <title>About the Team!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -12,27 +12,22 @@ body {
   margin: 0;
   overflow-x:hidden;
 }
-
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 .column {
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 }
-
 .about-section {
   padding: 100px;
   padding-bottom: 50px;
@@ -41,30 +36,24 @@ html {
   background: url("images/about-bg.jpg");
   color: white;
 }
-
 .about-text {
   padding: 70px;
   background-color: rgba(0,12,38, 0.6);
 }
-
 .container {
   padding: 0 16px;
 }
-
 .container::after, .row::after {
   content: "";
   clear: both;
   display: table;
 }
-
 .title {
   color: grey;
 }
-
 a {
   color: white;
 }
-
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -85,12 +74,9 @@ a {
             <a class="nav-link" href="http://localhost/chatroom/welcome.php">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">About
+            <a class="nav-link" href="#">About the Team
                   <span class="sr-only">(current)</span>
                 </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://localhost/chatroom/logout.php">Logout</a>
@@ -101,18 +87,17 @@ a {
   </nav>
 <div class="about-section">
   <div class="about-text">
-    <h1 style="font-size: 70px;">About Us</h1>
-    <p style="font-size:20px;">Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133)<br>.
-      This class project involves creating any web application of choice using any language and operating system platform.<br>
+    <h1 style="font-size: 70px;">About the Team</h1>
+    <p style="font-size:20px;">Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133) at SJSU.<br>
+      This class project consists of creating a web application of our choice using any language and operating system platform.<br>
       To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a></p>
   </div>
 </div>
-
 <h2 style="text-align:center; padding-top: 20px;">Our Team Members</h2>
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="images/default.jpg" alt="brian" style="width:100%">
+      <img src="images/profile-brian.jpg" alt="brian" style="width:100%">
       <div class="container">
         <h2>Brian Albert Rendoloza</h2>
         <p class="title">Team Member</p>
@@ -121,7 +106,6 @@ a {
       </div>
     </div>
   </div>
-
   <div class="column">
     <div class="card">
       <img src="images/profile-risha.jpg" alt="risha" style="width:100%">
@@ -133,7 +117,6 @@ a {
       </div>
     </div>
   </div>
-
   <div class="column">
     <div class="card">
       <img src="images/default.jpg" alt="yenni" style="width:100%">
@@ -146,7 +129,6 @@ a {
     </div>
   </div>
 </div>
-
 <div class="column">
   <div class="card">
     <img src="images/profile-uyen.jpg" alt="uyen" style="width:100%">
@@ -159,6 +141,5 @@ a {
   </div>
 </div>
 </div>
-
 </body>
 </html>
