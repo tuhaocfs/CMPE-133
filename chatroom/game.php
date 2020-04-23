@@ -1,3 +1,12 @@
+
+<!--Game worked on with Risha and Uyen -->
+<?php
+// welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
+session_start();
+if (!isset($_SESSION['user'])) {
+  header('location:login.php');
+}
+?>
 <!-- game code based on https://bootsnipp.com/tags/chat-->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -5,17 +14,29 @@
 <!------ Include the above in your HEAD tag ---------->
 <script>
 // scripts to be filled in
+var playerName = '<?php echo $_SESSION['user'];?>';
 var aCount = 0;
 var bCount = 0;
 var nullCount = 0;
 var episodes = 0;
-var gameScript = ["Hello, [insert name]. Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
+var gameScript = ["Hello, " + playerName, "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
 "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
-"Well, I’m sure you’ll be a pro at this in no time. I look forward to seeing how well you work."];
+"", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", "Cheers."];
 var playerScriptA = ["I like it. I think this is efficient.", "Going well. Happy to contribute."];
 var playerScriptB = ["It seems a little impersonal...", "It’s hard to keep up sometimes."];
-var gameEndingA = [];
-var gameEndingB = [];
+var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
+"I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
+"Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
+"You don't have to be so callous about it.",
+"But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
+"Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
+var gameEndingB = ["Woah, you're still on here?",
+"Especially what happened.",
+"Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
+"Right, I forgot that. I'm sorry",
+"Hey, " + playerName + ". Can I ask you something?",
+"How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
+"Yeah! See you tomorrow at 2?"];
 var playerEndingA = [];
 var playerEndingB = [];
 var part = 0;
@@ -98,11 +119,17 @@ $('body > div > div > div:nth-child(2) > span').click(function(){
 resetChat();
 
 //-- Print Messages
+/*
 var n = 500;
 for (var i = 0; i < gameScript.length; i++) {
-  insertChat("me", gameScript[i], n);
-  n = n + 1000;
-}
+  if (gameScript[i] == "") {
+    insertChat("me", "Waiting for user response", n);
+  }
+  else {
+    insertChat("me", gameScript[i], n);
+  }
+  n = n + 2000;
+}*/
 /*insertChat("you", playerScriptA[0], 1800);
 insertChat("me", gameScript[0], 500);
 insertChat("me", "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.", 1500);
@@ -111,9 +138,51 @@ insertChat("me", "What would you like to talk about today?", 3500);
 insertChat("you", "Tell me a joke",7000);
 insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
 insertChat("you", "LOL", 12000);
-insertChat("me", "Hello Tom...", 13500);*/
+insertChat("me", "Hello Tom...", 13500);
 
+if (gameScript[i] == "") {
+  $("#1").on("click", function() {
+    insertChat("you", playerScriptA[0], 0);
+  }
+ }
 
+else {*/
+
+  var n = 100;
+  for (var i = 0; i < gameScript.length; i++) {
+    if (gameScript[i] == "") {
+      document.getElementById("1").addEventListener("click", myFunction(elem));
+      document.getElementById("2").addEventListener("click", myFunction(elem));
+    }
+    insertChat("me", gameScript[i], n);
+    n = n + 1000;
+  }
+
+function myFunction(elem) {
+  switch(elem.id) {
+    case '1':
+      insertChat("you", playerScriptA[part], 0);
+      aCount++;
+      document.getElementById("demo1").innerHTML = "A count: " + aCount; // check how many times button is clicked. located when clicked on menu
+    break;
+
+    case '2':
+      insertChat("you", playerScriptB[part], 0);
+      bCount++;
+      document.getElementById("demo2").innerHTML = "B count: " + bCount; // check how many times button is clicked located
+    break;
+  }
+  insertChat("me", gameScript[i+1], n);
+ part++;
+}
+/*
+insertChat("you", playerScriptA[part], 0);
+aCount++;
+insertChat("me", gameScript[i+1], n);
+document.getElementById("demo1").innerHTML = "A count: " + aCount; // check how many times button is clicked. located when clicked on menu
+part++;
+*/
+/*
 function myFunction(elem) {
       switch(elem.id) {
         case '1':
@@ -130,6 +199,8 @@ function myFunction(elem) {
      }
      part++;
 }
+*/
+
 //document.getElementById("demo").innerHTML = aCount;
 //document.getElementById("demo2").innerHTML = bCount;
 //-- NOTE: No use time on insertChat.
