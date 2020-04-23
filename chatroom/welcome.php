@@ -39,12 +39,10 @@ h4 {
 	background-color: #021631 !important;
   border-color: #021631 !important;
 }
-
 .btn-primary:hover {
 	background-color: #002B79 !important;
   border-color: #002B79 !important;
 }
-
 </style>
 <body>
   <!--  navbar  on the top  -->
@@ -62,10 +60,7 @@ h4 {
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/chatroom/about.php">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="http://localhost/chatroom/about.php">About the Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/chatroom/logout.php">Logout</a>
@@ -87,12 +82,10 @@ h4 {
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div class="carousel-item active">
          <img src="images/slideshow-1.jpg" style = "filter: blur(5px);" class="d-block w-100" alt="9 to 5 story">
-
         <div class="carousel-caption d-none d-md-block" style="background-color: rgba(53,49,117, 0.6)" >
           <h3 class="display-4"><b>What is Chatroom Adventures?</b></h3>
           <p class="lead"><b>Chatroom Adventures is a "choose-your-own-adventure" web application where YOU choose how the story goes. <br>
             Choose your options, make friends or foes, the sky's the limit.</b></p>
-
         </div>
       </div>
       <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -123,7 +116,6 @@ h4 {
         </a>
   </div>
 </header>
-
 <!-- image for story  -->
 <h4>Choose how your story ends.</h4>
 <div class="card-group">
@@ -137,7 +129,6 @@ h4 {
        <a href="#" class="btn btn-primary btn-md pull-right">Continue Game</a>
      </div>
     </div>
-
   </div>
   <div class="card">
     <img class="card-img-top" src="images/allie.jpg" alt="default">
@@ -163,11 +154,9 @@ h4 {
     </div>
   </div>
 </div>
-
 <!-- Page Content -->
 <section class="py-5">
     <h8 class="lead">This webpage belongs to CMPE 133 Team 1 @ SJSU. </h8>
 </section>
 </body>
-
 </html>
