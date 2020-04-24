@@ -204,11 +204,30 @@ function myFunction(elem) {
 //document.getElementById("demo").innerHTML = aCount;
 //document.getElementById("demo2").innerHTML = bCount;
 //-- NOTE: No use time on insertChat.
+
+function goBack() {
+  var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
+  if (answer) {
+    window.location="http://localhost/chatroom/welcome.php";
+  }
+  else {
+    return false;
+  }
+   document.getElementById("goback").innerHTML = answer;
+}
+
+function saveGame() {
+  alert("Your game has been saved!");
+}
+// -->
 </script>
 <style>
 /*.mytext{
     border:0;padding:10px;background:whitesmoke;
 }*/
+body {
+  overflow-x: hidden;
+}
 .text{
     width:75%;display:flex;flex-direction:column;
 }
@@ -248,8 +267,8 @@ function myFunction(elem) {
     margin-left: -190px;
     background:#e0e0de;
     width: 1000px;
-    height:650px;
-    margin-top:90px;
+    height:620px;
+    margin-top:25px;
     margin-bottom:10px;
     overflow:hidden;
     padding:0;
@@ -312,53 +331,66 @@ input:focus{
     color: #d4d4d4;
 }
 
-/*Menu Section*/
-.menu-button {
-  background-color: #007BFF;
-  color:white;
-  font-weight: bold;
-  font-size: 12px;
-  width: 100px;
-  padding:16px 2px;
-  cursor: pointer;
-  position: fixed;
-  top: 5%;
-  right: 2%;
-  width: 100px;
-  border-radius: 10px;
+.topnav {
+  overflow: hidden;
+  background-color: #021631;
+  /*font: 'Montserrat', sans-serif;*/
+  font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  height: 57px;
 }
-.form-popup {           /* The menu */
-  display: none;
-  position: fixed;
-  top: 12%;
-  right: 2%;
+.rightnav {
+  padding-top: 20px;
+  padding-right: 205px;
 }
-.form-container {       /* Add styles to the menu container */
-  width: 175px;
-  padding: 16px 2px;
-  background-color:lightgray;
-  border-radius: 10px;
+.rightnav a {
+  float: right;
+  color: #818B98;
+  padding-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  text-decoration: none;
+	background-color: transparent;
 }
-.form-container .btn {  /* Set a style for the buttons in menu form */
-  background-color:#FFFFFF;
-  color: #003D6A;
-  padding: 10px 40px;
-  border: none;
-  width: 155px;
-  display: block;
-  margin: 10px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
+.rightnav a:hover {
+  color: #BFC5B2;
 
 }
-.form-container .btn:hover, .open-button:hover {  /* Add hover effects to buttons */
-  opacity: 1;
+.rightnav a.active {
+  color: white;
+}
+.leftnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding-left: 205px;
+  padding-top: 17px;
+  text-decoration: none;
+  font-size: 20px;
+  text-decoration: none;
+	background-color: transparent;
+}
+.leftnav a.active {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
 
 <!DOCTYPE html>
 <html>
     <body>
+      <div class="topnav">
+        <div class="leftnav">
+          <a href="#">Chatroom Adventures</a>
+        </div>
+          <div class="rightnav">
+            <a href="http://localhost/chatroom/logout.php">Logout</a>
+            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
+            <a href="#about"  onclick="saveGame()" id="save">Save</a>
+            <a class="active" href="#home">The 9 to 5</a>
+          </div>
+      </div>
+    </div>
         <div class="col-sm-3 col-sm-offset-4 frame">
             <ul></ul>
             <div>
@@ -377,28 +409,6 @@ input:focus{
                 </div>
             </div>
         </div>
-        <button class="menu-button" onclick="openForm()">Menu</button>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <button type="submit" class="btn" formaction="http://localhost/chatroom/instructions.php">Instructions</button>
-            <button type="submit" class="btn" formaction="http://localhost/chatroom/save.php">Save Game</button>
-            <button type="submit" class="btn" formaction="http://localhost/chatroom/welcome.php">Go Back</button>
-            <button type="submit" class="btn" formaction="http://localhost/chatroom/logout.php">Log Out</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-          <!--Display game count-->
-                <p id="demo1"></p>
-                <p id="demo2"></p>
-        </div>
-
-        <script>
-          function openForm() {
-            document.getElementById("myForm").style.display = "block";
-          }
-          function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-          }
-        </script>
 
     </body>
 </html>
