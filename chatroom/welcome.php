@@ -125,7 +125,7 @@ h4 {
       <h5 class="card-title">The 9 to 5</h5>
       <p class="card-text">You're a newly hired intern working for The Collective Intelligence Company (CIC). CIC believes the best way to advance is to make sure everything is in order and everyone is collaborating well. That's sounds pretty great, until...</p>
       <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
-       <a href="http://localhost/chatroom/game.php" class="btn btn-primary">Start Game</a>
+       <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary">Start Game</a>
        <a href="#" class="btn btn-primary btn-md pull-right">Continue Game</a>
      </div>
     </div>

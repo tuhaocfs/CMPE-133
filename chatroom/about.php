@@ -60,6 +60,25 @@ a {
     display: block;
   }
 }
+/*h1 animation*/
+h1 {
+  text-align:center;
+  display:inline-block;
+  font-size: 70px;
+  border-right: solid 5px rgb(255,255,255);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text 4s steps(29,end) 0s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+@keyframes animated-text{ /*text animation*/
+  from{width: 0px;}
+  to{width: 500px;}
+}
+@keyframes animated-cursor{ /* cursor animations */
+  from{border-right-color: rgb(255,255,255);}
+  to{border-right-color: transparent;}
+}
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #021631 !important;">
@@ -87,7 +106,7 @@ a {
   </nav>
 <div class="about-section">
   <div class="about-text">
-    <h1 style="font-size: 70px;">About the Team</h1>
+    <h1>About the Team</h1>
     <p style="font-size:20px;">Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133) at SJSU.<br>
       This class project consists of creating a web application of our choice using any language and operating system platform.<br>
       To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a></p>
@@ -135,7 +154,7 @@ a {
     <div class="container">
       <h2>Uyen Nguyen</h2>
       <p class="title">Team Member</p>
-      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+      <p>Programming excites me because I get to learn and challenge myself every day.</p>
       <p>GitHub: uyen-carolyn</p>
     </div>
   </div>
