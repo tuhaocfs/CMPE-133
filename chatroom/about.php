@@ -112,7 +112,7 @@ a {
       <div class="container">
         <h2>Risha Ray</h2>
         <p class="title">Team Member</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>I love designing and developing applications!</p>
         <p>GitHub: risharay</p>
       </div>
     </div>
