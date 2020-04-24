@@ -42,10 +42,10 @@ var playerEndingB = [];
 var part = 0;
 
 var me = {};
-me.avatar = "images/default.jpg";
+me.avatar = "../images/default.jpg";
 
 var you = {};
-you.avatar = "images/default.jpg";
+you.avatar = "../images/default.jpg";
 
 function formatAMPM(date) {
     var hours = date.getHours();
