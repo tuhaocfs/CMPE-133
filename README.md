@@ -19,7 +19,9 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 1. Verify that WAMP can be run by your computer and other applications such as MySQL is installed. WAMP has a specific installation file that is used to create this project, which also includes the necessary files to run PHP and PHPMySQL. To download the installation, click here:  https://drive.google.com/file/d/1YxdX46Fg1r60G5W481L4OHzjEuB7mFrZ/view?usp=sharing. 
 2. Run the WAMP server and place the chatroom folder from the repository into the wamp64/www directory. 
 #### XAMPP
-1. For XAMPP, [insert set up for XAMPP]
+1. Verify that XAMPP can be run by your computer and other applications such as MySQL is installed, and select proper version of PHP
+2. Start XAMPP, and start the stack services, which include ProFTPD, Apache, and MySQL. Under network, run the localhost server of your choice, but make sure it matches with the server you specify in your files. Mount the /opt/lampp data volume, and click on explore, where you have all the files. Place files within htdocs. 
+3. Go to the local host either through your browser, or through clicking "Go to Application" on XAMPP.
 ### How To Run The Project
 1. Make sure the server is running. 
 2. Go to http://localhost/chatroom/login.php to view the application. 
