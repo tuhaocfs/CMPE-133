@@ -48,6 +48,10 @@ html {
   clear: both;
   display: table;
 }
+img {
+  width:  490px;
+  height: 490px;
+}
 .title {
   color: grey;
 }
@@ -138,7 +142,7 @@ h1 {
   </div>
   <div class="column">
     <div class="card">
-      <img src="images/default.jpg" alt="yenni" style="width:100%">
+      <img src="images/profile_Yenni.jpg" alt="yenni" style="width:100%">
       <div class="container">
         <h2>Yenni Lam</h2>
         <p class="title">Team Member</p>

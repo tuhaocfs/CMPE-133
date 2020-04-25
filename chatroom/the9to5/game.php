@@ -41,11 +41,14 @@ var playerEndingA = [];
 var playerEndingB = [];
 var part = 0;
 
-var me = {};
-me.avatar = "../images/boss2.png";
+var peter = {};
+peter.avatar = "../images/boss2.png";
 
 var you = {};
-you.avatar = "../images/user.jpg";
+you.avatar = "../images/user.png";
+
+var pat = {};
+pat.avatar = "../images/pat.png";
 
 function formatAMPM(date) {
     var hours = date.getHours();
@@ -66,24 +69,36 @@ function insertChat(who, text, time){
     var control = "";
     var date = formatAMPM(new Date());
 
-    if (who == "me"){
+    if (who == "peter"){
         control = '<li style="width:100%">' +
                         '<div class="msj macro">' +
-                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ me.avatar +'" /></div>' +
+                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ peter.avatar +'" /></div>' +
                             '<div class="text text-l">' +
                                 '<p>'+ text +'</p>' +
                                 '<p><small>'+date+'</small></p>' +
                             '</div>' +
                         '</div>' +
                     '</li>';
-    }else{
+    }
+    else if (who == "pat") {
+      control = '<li style="width:100%">' +
+                      '<div class="msj macro">' +
+                      '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ pat.avatar +'" /></div>' +
+                          '<div class="text text-l">' +
+                              '<p>'+ text +'</p>' +
+                              '<p><small>'+date+'</small></p>' +
+                          '</div>' +
+                      '</div>' +
+                  '</li>';
+    }
+    else{
         control = '<li style="width:100%;">' +
                         '<div class="msj-rta macro">' +
                             '<div class="text text-r">' +
                                 '<p>'+text+'</p>' +
                                 '<p><small>'+date+'</small></p>' +
                             '</div>' +
-                        '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width:100%;" src="'+you.avatar+'" /></div>' +
+                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ you.avatar+'" /></div>' +
                   '</li>';
     }
     setTimeout(
@@ -154,7 +169,7 @@ else {*/
       document.getElementById("1").addEventListener("click", myFunction(elem));
       document.getElementById("2").addEventListener("click", myFunction(elem));
     }
-    insertChat("me", gameScript[i], n);
+    insertChat("peter", gameScript[i], n);
     n = n + 1000;
   }
 
@@ -172,7 +187,6 @@ function myFunction(elem) {
       document.getElementById("demo2").innerHTML = "B count: " + bCount; // check how many times button is clicked located
     break;
   }
-  insertChat("me", gameScript[i+1], n);
  part++;
 }
 /*
