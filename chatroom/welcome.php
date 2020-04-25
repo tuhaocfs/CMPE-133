@@ -1,12 +1,22 @@
+<?php
+// welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
+session_start();
+if (!isset($_SESSION['user'])) {
+  header('location:login.php');
+  exit(); 
+}
+?>
+
 <!-- Original Code from Yenni Lam https://repl.it/@yennilam/webCamS-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Welcome</title>
+  <title>Welcome, <?php echo $_SESSION['user']; ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="icon" href="images/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
