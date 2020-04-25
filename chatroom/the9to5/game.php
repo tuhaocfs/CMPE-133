@@ -12,6 +12,7 @@ if (!isset($_SESSION['user'])) {
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
@@ -193,7 +194,8 @@ if (!isset($_SESSION['user'])) {
                 <div class="msj-rta macro">
                     <div class="text text-r" style="background:whitesmoke !important">
                       <!--Needs to be altered to display scripts, fit into page, and only continue game script once clicked-->
-                        <button id='1' onclick="myFunction(this)">button 1</button>
+                       <input type = "button" id="1"  onclick="myFunction(this)" value = "button1"></button>
+                        <!--<button id='1' onclick="myFunction(this)">button 1</button> --> 
                         <button id='2' onclick="myFunction(this)">button 2</button>
 
                         <!--input class="mytext" placeholder="Type a message"/-->
@@ -344,20 +346,27 @@ if (!isset($_SESSION['user'])) {
         /*insertChat("you", playerScriptA[0], 1800);
         insertChat("me", gameScript[0], 500);
         insertChat("me", "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.", 1500);
-
         insertChat("me", "What would you like to talk about today?", 3500);
         insertChat("you", "Tell me a joke",7000);
         insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
         insertChat("you", "LOL", 12000);
         insertChat("me", "Hello Tom...", 13500);
-
         if (gameScript[i] == "") {
           $("#1").on("click", function() {
             insertChat("you", playerScriptA[0], 0);
           }
          }
-
         else {*/
+
+        //NEW changing button text after user click on it (only for button 1)
+        $(document).ready(function() { 
+            $("input").click(function() { 
+                // Change text of input button 
+                $("#1").prop("value", "Next part of story"); 
+            }); 
+        }); 
+
+        
         function runChat() {
           console.log('runchat');
           for (; stage < gameScript.length; stage++) {
@@ -409,7 +418,6 @@ if (!isset($_SESSION['user'])) {
                   aCount++;
                   document.getElementById("demo1").innerHTML = "A count: " + aCount; // check how many times button is clicked. located when clicked on menu
                 break;
-
                 case '2':
                   insertChat("you", playerScriptB[part], 0);
                   bCount++;
