@@ -1,4 +1,3 @@
-
 <!--Game worked on with Risha and Uyen -->
 <?php
 // welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
@@ -25,7 +24,8 @@ if (!isset($_SESSION['user'])) {
       border:0;padding:10px;background:whitesmoke;
   }*/
   body {
-    overflow-x: hidden;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
   }
   .text {
       width:75%;display:flex;flex-direction:column;
@@ -43,12 +43,7 @@ if (!isset($_SESSION['user'])) {
       float:right;
       padding-left:10px;
   }
-  .text-message {
-    width:
-  }
-  /*.text-m {
-    display: none;
-  }*/
+
   .avatar{
       display:flex;
       justify-content:center;
@@ -59,10 +54,21 @@ if (!isset($_SESSION['user'])) {
   }
   .macro{
       margin-top:5px;
-      width:95%;
+      width:890px;
       border-radius:5px;
       padding:5px;
       display:flex;
+
+
+  }
+  .textbox {
+    width: 965px;
+    margin-left: 17px;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #20647B;
+    height: 85px;
   }
   .msj-rta{
       float:right;
@@ -102,6 +108,7 @@ if (!isset($_SESSION['user'])) {
       flex-direction: column;
       top:0;
       overflow-y:scroll;
+      height: 535px;
   }
   .msj:before{
       width: 0;
@@ -142,22 +149,44 @@ if (!isset($_SESSION['user'])) {
   }
 
   .options {
-    width: 895px;
+    width: 765px;
     font-size: 15px;
+    background-color: white;
+    margin-left: 40px;
+  }
+  .optA, .optB {
+    border: none;
+    height: 30px;
+    margin: 2px;
   }
   .optA {
-    border: none;
+    margin-bottom: 8px;
   }
   .optA:hover {
     background-color: #AD7F29;
     color: white;
   }
-  .optB {
-    border: none;
-  }
   .optB:hover {
-    background-color: #20647B; /* Green */
+    background-color: #20647B;
     color: white;
+  }
+
+  .send-btn {
+    float:right !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #E0E0DE;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #E0E0DE;
   }
 
 /*navigation bar menu*/
@@ -221,20 +250,21 @@ if (!isset($_SESSION['user'])) {
     </div>
         <div class="col-sm-3 col-sm-offset-4 frame">
             <ul></ul>
-            <div>
-                <div class="msj macro" id = "mess-box">
-                    <div class="text" style="background:whitesmoke !important">
+            <div class = "mess">
+                <div class="macro textbox" id = "mess-box" style="background-color: white; ">
+                    <div class="text" >
                       <!--Needs to be altered to display scripts, fit into page, and only continue game script once clicked-->
                       <div class=" text options" id= "options" style="visibility:hidden !important;">
                         <input type = "button" id="1" class = "optA" onclick="myFunction(this)" value = ""></button>
                         <input type = "button" id="2" class = "optB" onclick="myFunction(this)" value = ""></button>
                       </div>
-
+                    </div>
+                    <div style="padding-top:3px; padding-left:135px;">
+                        <!--span class="glyphicon glyphicon-share-alt"></span-->
+                         <img src="../images/send.jpg" alt="send btn">
                     </div>
                 </div>
-                <div style="padding:10px;">
-                    <span class="glyphicon glyphicon-share-alt"></span>
-                </div>
+
             </div>
         </div>
         <script>
@@ -371,9 +401,9 @@ if (!isset($_SESSION['user'])) {
             console.log('looping: ',stage);
             document.getElementById("options").style.visibility = "hidden";
             if (gameScript[stage] == "") {
-              document.getElementById("options").style.visibility = "visible";
               document.getElementById("1").value = playerScriptA[part];
               document.getElementById("2").value = playerScriptB[part];
+              document.getElementById("options").style.visibility = "visible";
               document.getElementById("1").addEventListener("click", myFunction);
               document.getElementById("2").addEventListener("click", myFunction);
 
@@ -386,6 +416,7 @@ if (!isset($_SESSION['user'])) {
 
 
         function myFunction(elem) {
+
           switch(elem.id) {
             case '1':
               insertChat("you", playerScriptA[part], 0);
@@ -397,11 +428,11 @@ if (!isset($_SESSION['user'])) {
               bCount++;
             break;
           }
-          document.getElementById("options").style.visibility = "hidden";
           part++;
           stage++;
           document.getElementById("1").removeEventListener("click", myFunction);
           document.getElementById("2").removeEventListener("click", myFunction);
+          document.getElementById("options").style.visibility = "hidden";
           runChat();
         }
         /*
