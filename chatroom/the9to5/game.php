@@ -43,6 +43,12 @@ if (!isset($_SESSION['user'])) {
       float:right;
       padding-left:10px;
   }
+  .text-message {
+    width:
+  }
+  /*.text-m {
+    display: none;
+  }*/
   .avatar{
       display:flex;
       justify-content:center;
@@ -52,10 +58,15 @@ if (!isset($_SESSION['user'])) {
       padding-right:10px;
   }
   .macro{
-      margin-top:5px;width:85%;border-radius:5px;padding:5px;display:flex;
+      margin-top:5px;
+      width:85%;
+      border-radius:5px;
+      padding:5px;
+      display:flex;
   }
   .msj-rta{
-      float:right;background:whitesmoke;
+      float:right;
+      background:whitesmoke;
   }
   .msj{
       float:left;background:white;
@@ -130,6 +141,26 @@ if (!isset($_SESSION['user'])) {
       color: #d4d4d4;
   }
 
+  .options {
+    width: 810px;
+    font-size: 15px;
+  }
+  .optA {
+    border: none;
+  }
+  .optA:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  .optB {
+    border: none;
+  }
+  .optB:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+
+/*navigation bar menu*/
   .topnav {
     overflow: hidden;
     background-color: #021631;
@@ -191,14 +222,13 @@ if (!isset($_SESSION['user'])) {
         <div class="col-sm-3 col-sm-offset-4 frame">
             <ul></ul>
             <div>
-                <div class="msj-rta macro">
-                    <div class="text text-r" style="background:whitesmoke !important">
+                <div class="msj macro" id = "mess-box">
+                    <div class="text" style="background:whitesmoke !important">
                       <!--Needs to be altered to display scripts, fit into page, and only continue game script once clicked-->
-                       <input type = "button" id="1"  onclick="myFunction(this)" value = "button1"></button>
-                        <!--<button id='1' onclick="myFunction(this)">button 1</button> --> 
-                        <button id='2' onclick="myFunction(this)">button 2</button>
-
-                        <!--input class="mytext" placeholder="Type a message"/-->
+                      <div class=" text options" id= "options" style="visibility:hidden !important;">
+                        <input type = "button" id="1" class = "optA" onclick="myFunction(this)" value = ""></button>
+                        <input type = "button" id="2" class = "optB" onclick="myFunction(this)" value = ""></button>
+                      </div>
 
                     </div>
                 </div>
@@ -216,9 +246,9 @@ if (!isset($_SESSION['user'])) {
         var episodes = 0;
         var gameScript = ["Hello, " + playerName, "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
         "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
-        "", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", "Cheers."];
-        var playerScriptA = ["I like it. I think this is efficient.", "Going well. Happy to contribute."];
-        var playerScriptB = ["It seems a little impersonal...", "It’s hard to keep up sometimes."];
+        "", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", "", "Cheers."];
+        var playerScriptA = ["I like it. I think this is efficient.", "Cool."];
+        var playerScriptB = ["It seems a little impersonal...", "Cool."];
         var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
         "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
         "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
@@ -237,6 +267,7 @@ if (!isset($_SESSION['user'])) {
         var part = 0;
         var stage = 0;
         var n = 100;
+        //var gameProgress = {stage: stage, part: part, a: aCount, b: bCount}; // game progress
 
         var peter = {};
         peter.avatar = "../images/boss2.png";
@@ -332,50 +363,20 @@ if (!isset($_SESSION['user'])) {
         runChat();
 
         //-- Print Messages
-        /*
-        var n = 500;
-        for (var i = 0; i < gameScript.length; i++) {
-          if (gameScript[i] == "") {
-            insertChat("me", "Waiting for user response", n);
-          }
-          else {
-            insertChat("me", gameScript[i], n);
-          }
-          n = n + 2000;
-        }*/
-        /*insertChat("you", playerScriptA[0], 1800);
-        insertChat("me", gameScript[0], 500);
-        insertChat("me", "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.", 1500);
-        insertChat("me", "What would you like to talk about today?", 3500);
-        insertChat("you", "Tell me a joke",7000);
-        insertChat("me", "Spaceman: Computer! Computer! Do we bring battery?!", 9500);
-        insertChat("you", "LOL", 12000);
-        insertChat("me", "Hello Tom...", 13500);
-        if (gameScript[i] == "") {
-          $("#1").on("click", function() {
-            insertChat("you", playerScriptA[0], 0);
-          }
-         }
-        else {*/
 
-        //NEW changing button text after user click on it (only for button 1)
-        $(document).ready(function() { 
-            $("input").click(function() { 
-                // Change text of input button 
-                $("#1").prop("value", "Next part of story"); 
-            }); 
-        }); 
 
-        
         function runChat() {
           console.log('runchat');
           for (; stage < gameScript.length; stage++) {
             console.log('looping: ',stage);
+            document.getElementById("options").style.visibility = "hidden";
             if (gameScript[stage] == "") {
+              document.getElementById("options").style.visibility = "visible";
+              document.getElementById("1").value = playerScriptA[part];
+              document.getElementById("2").value = playerScriptB[part];
               document.getElementById("1").addEventListener("click", myFunction);
-            //  document.getElementById("2").addEventListener("click", myFunction);
-              //continue;
-              //$("#1").click(myFunction);
+              document.getElementById("2").addEventListener("click", myFunction);
+
               break;
             }
             insertChat("peter", gameScript[stage], n);
@@ -389,18 +390,18 @@ if (!isset($_SESSION['user'])) {
             case '1':
               insertChat("you", playerScriptA[part], 0);
               aCount++;
-              //document.getElementById("demo1").innerHTML = "A count: " + aCount; // check how many times button is clicked. located when clicked on menu
             break;
 
             case '2':
               insertChat("you", playerScriptB[part], 0);
               bCount++;
-              //document.getElementById("demo2").innerHTML = "B count: " + bCount; // check how many times button is clicked located
             break;
           }
+          document.getElementById("options").style.visibility = "hidden";
           part++;
           stage++;
-          n = n + 1000; 
+          document.getElementById("1").removeEventListener("click", myFunction);
+          document.getElementById("2").removeEventListener("click", myFunction);
           runChat();
         }
         /*
