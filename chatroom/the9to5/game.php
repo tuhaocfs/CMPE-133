@@ -27,7 +27,7 @@ if (!isset($_SESSION['user'])) {
   body {
     overflow-x: hidden;
   }
-  .text{
+  .text {
       width:75%;display:flex;flex-direction:column;
   }
   .text > p:first-of-type{
@@ -59,7 +59,7 @@ if (!isset($_SESSION['user'])) {
   }
   .macro{
       margin-top:5px;
-      width:85%;
+      width:95%;
       border-radius:5px;
       padding:5px;
       display:flex;
@@ -142,28 +142,28 @@ if (!isset($_SESSION['user'])) {
   }
 
   .options {
-    width: 810px;
+    width: 895px;
     font-size: 15px;
   }
   .optA {
     border: none;
   }
   .optA:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #AD7F29;
     color: white;
   }
   .optB {
     border: none;
   }
   .optB:hover {
-    background-color: #4CAF50; /* Green */
+    background-color: #20647B; /* Green */
     color: white;
   }
 
 /*navigation bar menu*/
   .topnav {
     overflow: hidden;
-    background-color: #021631;
+    background-color: #20647B;
     /*font: 'Montserrat', sans-serif;*/
     font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 57px;
@@ -244,9 +244,9 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["Hello, " + playerName, "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
+        var gameScript = ["Hello, " + playerName + ".", "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
         "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
-        "", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", "", "Cheers."];
+        "", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", ""];
         var playerScriptA = ["I like it. I think this is efficient.", "Cool."];
         var playerScriptB = ["It seems a little impersonal...", "Cool."];
         var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
@@ -270,10 +270,10 @@ if (!isset($_SESSION['user'])) {
         //var gameProgress = {stage: stage, part: part, a: aCount, b: bCount}; // game progress
 
         var peter = {};
-        peter.avatar = "../images/boss2.png";
+        peter.avatar = "../images/boss.png";
 
         var you = {};
-        you.avatar = "../images/user.png";
+        you.avatar = "../images/player.png";
 
         var pat = {};
         pat.avatar = "../images/pat.png";
