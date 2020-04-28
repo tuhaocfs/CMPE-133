@@ -274,6 +274,7 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
+        
         var gameScript = ["Dude. I think Mr. Pearson locked me in.", "", "I swear this is his plan. I can’t get out of my office. Why would he make me stay here?",
         "", "What in the world did I do wrong?", " Wait, are you behind this?", "You and Mr. Pearson have been talking to each other a lot lately? I’ve read your conversations whenever I pass by your computer.",
         "Tell me that I didn’t actually see yours and Mr. Pearson’s exchange about replacing me.", " ", playerName + ".", "ARE YOU SERIOUS?",
@@ -287,6 +288,7 @@ if (!isset($_SESSION['user'])) {
         var playerScriptB = ["What? Why would you think that?", "Come on. Mr. Pearson’s a bit of a workaholic, but he wouldn’t mess with us like that.",
         "Yes, he asked me about that, but maybe we should focus more on getting our doors unlocked.",
         "Slow down. I’m sorry, Pat. Talk to me. What exactly is going on?", "Pat? Are you still there?", "Go to Episode 5"];
+        
         var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
         "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
         "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
