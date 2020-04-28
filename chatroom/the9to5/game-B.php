@@ -20,9 +20,6 @@ if (!isset($_SESSION['user'])) {
   <title>The 9 to 5</title>
   <link rel="icon" href="../images/favicon.ico">
   <style>
-  /*.mytext{
-      border:0;padding:10px;background:whitesmoke;
-  }*/
   body {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -154,18 +151,12 @@ if (!isset($_SESSION['user'])) {
     background-color: white;
     margin-left: 40px;
   }
-  .optA, .optB {
+  .optB {
     border: none;
     height: 30px;
-    margin: 2px;
+    margin-top: 25px;
   }
-  .optA {
-    margin-bottom: 8px;
-  }
-  .optA:hover {
-    background-color: #AD7F29;
-    color: white;
-  }
+
   .optB:hover {
     background-color: #20647B;
     color: white;
@@ -255,8 +246,7 @@ if (!isset($_SESSION['user'])) {
                     <div class="text" >
                       <!--Needs to be altered to display scripts, fit into page, and only continue game script once clicked-->
                       <div class=" text options" id= "options">
-                        <input type = "button" id="1" class = "optA" onclick="chooseOption(this)" value = ""></button>
-                        <input type = "button" id="2" class = "optB" onclick="chooseOption(this)" value = ""></button>
+                        <input type = "button" id="1" class = "optB" onclick="chooseOption(this)" value = ""></button>
                       </div>
                     </div>
                     <div style="padding-top:3px; padding-left:135px;">
@@ -274,50 +264,37 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["", playerName + ". I was going to ask you to send those to me.",
-        "I’m glad that you are working efficiently. Say, how do you like the company so far? ", "",
-        "It’s best that you adapt yourself to work quicker. The workload isn’t slowing down any time soon.",
+        var gameScript = [ "Did you hear the results of the court-hearing?",
+        "Mr. Pearson and the higher-ups of CIC are sentenced to life!",
         "",
-        "I’m glad that you are at least acclimating to our environment.",
-        "Hm, I just received your documents and there’s an error in it. All the calculations are wrong because of it. Get this corrected, will you?", "",
-        "I want it done now. I don’t care if you have to skip lunch or stay late for it. ",
-         "Anyways, I want to let you know that we have a big presentation for a project coming up and you will be working with Pat. You’ve heard of him? ", "",
-         "Well, whatever your thoughts on him are, you’ll be working with him. He’s one of our new full times but he’s new like you.",
-         "new"];
-        var playerScriptA = ["*send documents*",
-        "Going well. Happy to contribute.",
-        "I'll do my best at all cost. You can leave it to me!",
-        "Right away!" ,
-        "No, I haven’t gotten a chance to meet with him because I’ve been too occupied with work.",
-        "Go to Episode 2"];
-        var playerScriptB = ["*send documents*",
-        "It’s hard to keep up sometimes.",
-        "I'll do my best but it will be a challenge.",
-        "I'll get back to you after lunch.",
-        "I’ve talked to him during lunch. He’s pretty cool. It’s weird that he’s the only one who was willing to talk with me though...",
-        "Go to Episode 2"];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
+        "Right, I forgot that. I'm sorry.",
+        "",
+        "I know...",
+        "What Mr. Pearson said since I've worked here still hurts.",
+        "I wish I can make it go away.",
+        "",
         "Hey, " + playerName + ". Can I ask you something?",
         "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
-        var playerEndingA = [];
-        var playerEndingB = [];
+        "",
+        "Okay. I just wanted to make sure.",
+        "Just know that I'm free to listen when you're ready.",
+        "",
+        "Yeah! See you tomorrow at 2?",
+        "",
+        "Meet you there!",
+        "end"];
+        var playerScriptA = [
+        "Pat, I was there with you. LOL.",
+        "Hey, no need to apologize.",
+        "In time, Pat. It's okay.",
+        "Oh, don’t worry about it. Just a few bruises.",
+        "Let’s plan an outing. My treat. Does Brad’s Cafe sound good?",
+        "Yeah!",
+        "The End"];
         var part = 0;
         var stage = 0;
         var n = 100;
         //var gameProgress = {stage: stage, part: part, a: aCount, b: bCount}; // game progress
-
-        var peter = {};
-        peter.avatar = "../images/boss.png";
 
         var you = {};
         you.avatar = "../images/player.png";
@@ -344,27 +321,16 @@ if (!isset($_SESSION['user'])) {
             var control = "";
             var date = formatAMPM(new Date());
 
-            if (who == "peter"){
+            if (who == "pat"){
                 control = '<li style="width:100%">' +
                                 '<div class="msj macro">' +
-                                '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ peter.avatar +'" /></div>' +
+                                '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ pat.avatar +'" /></div>' +
                                     '<div class="text text-l">' +
                                         '<p>'+ text +'</p>' +
                                         '<p><small>'+date+'</small></p>' +
                                     '</div>' +
                                 '</div>' +
                             '</li>';
-            }
-            else if (who == "pat") {
-              control = '<li style="width:100%">' +
-                              '<div class="msj macro">' +
-                              '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ pat.avatar +'" /></div>' +
-                                  '<div class="text text-l">' +
-                                      '<p>'+ text +'</p>' +
-                                      '<p><small>'+date+'</small></p>' +
-                                  '</div>' +
-                              '</div>' +
-                          '</li>';
             }
             else{
                 control = '<li style="width:100%;">' +
@@ -413,52 +379,32 @@ if (!isset($_SESSION['user'])) {
             console.log('looping: ',stage);
             if (gameScript[stage] == "") {
               document.getElementById("1").value = playerScriptA[part];
-              document.getElementById("2").value = playerScriptB[part];
               //$("#options").show();
               document.getElementById("1").addEventListener("click", chooseOption);
-              document.getElementById("2").addEventListener("click", chooseOption);
 
               break;
             }
-            else if (gameScript[stage] == "new") {
+            else if (gameScript[stage] == "end") {
               document.getElementById("1").value = playerScriptA[part];
-              document.getElementById("2").value = playerScriptB[part];
 
               document.getElementById("1").addEventListener("click", newStory);
-              document.getElementById("2").addEventListener("click", newStory);
               break;
             }
-            insertChat("peter", gameScript[stage], n);
+            insertChat("pat", gameScript[stage], n);
             n = n + 1000;
           }
         }
 
         function newStory(elem) {
-          window.location.href = 'http://localhost/chatroom/the9to5/game-1.php';
-          part++;
-          stage++;
-          //document.getElementById("1").removeEventListener("click", newStory);
-          //document.getElementById("2").removeEventListener("click", newStory);
+          window.location.href = 'http://localhost/chatroom/welcome.php';
         }
 
 
         function chooseOption(elem) {
-          $("#options").show();
-          switch(elem.id) {
-            case '1':
-              insertChat("you", playerScriptA[part], 0);
-              aCount++;
-            break;
-
-            case '2':
-              insertChat("you", playerScriptB[part], 0);
-              bCount++;
-            break;
-          }
+          insertChat("you", playerScriptA[part], 0);
           part++;
           stage++;
           document.getElementById("1").removeEventListener("click", chooseOption);
-          document.getElementById("2").removeEventListener("click", chooseOption);
           runChat();
         }
 
