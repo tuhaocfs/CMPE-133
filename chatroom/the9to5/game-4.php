@@ -275,6 +275,8 @@ if (!isset($_SESSION['user'])) {
         var nullCount = 0;
         var episodes = 0;
         
+        
+
         var gameScript = ["Dude. I think Mr. Pearson locked me in.", "", "I swear this is his plan. I can’t get out of my office. Why would he make me stay here?",
         "", "What in the world did I do wrong?", " Wait, are you behind this?", "You and Mr. Pearson have been talking to each other a lot lately? I’ve read your conversations whenever I pass by your computer.",
         "Tell me that I didn’t actually see yours and Mr. Pearson’s exchange about replacing me.", " ", playerName + ".", "ARE YOU SERIOUS?",
