@@ -274,22 +274,30 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["Thank you " + playerName + "!","", "Sorry about the panic attack! Peter was not too happy about it.", "", "Yeah... Anyways, do you want to go out and eat with the group to celebrate?", "", "Okay, see you next time."];
-        var playerScriptA = ["I’m happy to be of help. Don’t worry about it.", "You should toughen up. That’s why he was so hard on you. You’ll do a better job next time.", "Sure!" ];
-        var playerScriptB = ["It’s kind of weird that you just had a panic attack like that.","Hey, the stress can get to any of us. At least we got past it and you got the job done. Silver lining.", "Sorry, but there’s other work for Leader that I’ve got to catch up on." ];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
-        "Hey, " + playerName + ". Can I ask you something?",
-        "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
+        var gameScript = [
+          "Thank you " + playerName + "!",
+          "If it weren’t for you, we wouldn’t have such a successful presentation. ",
+          "",
+          "I’m really sorry about my panic attack.",
+          "It just happens when I get very nervous and stressed out.",
+          "Mr. Pearson actually pulled me aside afterwards and I got an earful from him.",
+          "",
+          "I promise I’ll be better at it.",
+          "Say, let's go celebrate at Brad's cafe after work.",
+          "My treat.",
+          "",
+          "Talk to you later!",
+          "new"];
+        var playerScriptA = [
+          "Your panic attack almost compromised it.",
+          "You should toughen up, Pat. That’s why he’s always so hard on you.",
+          "Sorry, there’s other work for Mr.Pearson I’ve got to catch up on.",
+          "Go to Episode 3"];
+        var playerScriptB = [
+          "I’m happy to be of help. Don’t worry about it.",
+          "Stress can get the best of us. At least it’s all over and the job is done.",
+          "Sounds good! See you there!",
+          "Go to Episode 3" ];
         var playerEndingA = [];
         var playerEndingB = [];
         var part = 0;

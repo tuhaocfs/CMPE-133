@@ -274,26 +274,23 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["Hello, " + playerName + ".", "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
-        "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication. It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
-        "", "Well, I’m sure you’ll be a pro at this in no time." , "I look forward to seeing how well you work.", "", "Cheers!", "new"];
-        var playerScriptA = ["I like it. I think this is efficient.", "Cool." , "Go to Episode 1"];
-        var playerScriptB = ["It seems a little impersonal...", "Cool.", "Go to Episode 1"];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
-        "Hey, " + playerName + ". Can I ask you something?",
-        "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
-        var playerEndingA = [];
-        var playerEndingB = [];
+        var gameScript = [
+          "Hello, " + playerName + ".",
+          "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
+          "As you already know, I’m your leader Mr. Pearson. And as you can see, we will be using this chatroom for much of our communication.",
+          "It’s not only convenient but also helps us foster good relations among the workforce while facilitating increased productivity.",
+          "",
+          "Well, I’m sure you’ll be a pro at this in no time." ,
+          "I look forward to seeing how well you work.",
+          "", "Cheers!", "new"];
+        var playerScriptA = [
+          "I like it. I think this is efficient.",
+          "Likewise." ,
+          "Go to Episode 1"];
+        var playerScriptB = [
+          "It seems a little impersonal...",
+          "Same.",
+          "Go to Episode 1"];
         var part = 0;
         var stage = 0;
         var n = 100;
