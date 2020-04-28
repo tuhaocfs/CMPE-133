@@ -139,7 +139,7 @@ h1 {
       <div class="container">
         <h2>Brian Albert Rendoloza</h2>
         <p class="title">Team Member</p>
-        <p>I love creating the story for this application.</p>
+        <p>It was fun creating the story for this adventure!</p>
         <p>GitHub: Redoloza-BrianAlbert</p>
       </div>
     </div>
