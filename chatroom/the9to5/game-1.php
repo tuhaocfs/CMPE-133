@@ -302,8 +302,6 @@ if (!isset($_SESSION['user'])) {
           "I'll get back to you after lunch.",
           "I’ve talked to him during lunch. He’s pretty cool.",
           "Go to Episode 2"];
-        var playerEndingA = [];
-        var playerEndingB = [];
         var part = 0;
         var stage = 0;
         var n = 100;

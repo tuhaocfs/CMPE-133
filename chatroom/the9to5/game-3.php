@@ -307,8 +307,6 @@ if (!isset($_SESSION['user'])) {
               "I'm honored for the offer, but is Pat really doing that badly?",
               "I scheduled a day off tomorrow. But if it's that important...",
               "Go to Episode 4"];
-        var playerEndingA = [];
-        var playerEndingB = [];
         var part = 0;
         var stage = 0;
         var n = 100;

@@ -274,35 +274,27 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["Dude. I think Mr. Pearson locked me in.", "", "I swear this is his plan. I can’t get out of my office. Why would he make me stay here?",
-        "", "What in the world did I do wrong?", " Wait, are you behind this?", "You and Mr. Pearson have been talking to each other a lot lately? I’ve read your conversations whenever I pass by your computer.",
-        "Tell me that I didn’t actually see yours and Mr. Pearson’s exchange about replacing me.", " ", playerName + ".", "ARE YOU SERIOUS?",
-        " answer me, " + playerName + "!", "HEY!", playerName + "!", "asdopabpaewagalsdkjnbfjoiij", "You can’t do this to me!", 
-        "Tell me this isn’t true. You actually replaced me?", "", "Gosh, am I ever good enough for this company?", " This is what it comes down to?",
-        "What have I done wrong, " + playerName + "?" , "I did my damn har  har  hard ess t.", " I dd ev erything he a sked me, an yet ths happpens … wh a why…",
-        "", " ", " ", "new"     ];
-        var playerScriptA = ["Nonsense… Our leader Mr. Pearson wouldn’t do such a thing.", 
-        "Maybe he’s mad at you, but I’ve been putting in the effort as much as I could. Why would he be mad at me?", "Yes. He asked me because you obviously need time off.",
-        "Calm down. Spamming me isn’t going to get anything done. You’re only proving Mr. Pearson’s point.", "Pat? Where are you?", "Go to Episode 5"];
-        var playerScriptB = ["What? Why would you think that?", "Come on. Mr. Pearson’s a bit of a workaholic, but he wouldn’t mess with us like that.",
-        "Yes, he asked me about that, but maybe we should focus more on getting our doors unlocked.",
-        "Slow down. I’m sorry, Pat. Talk to me. What exactly is going on?", "Pat? Are you still there?", "Go to Episode 5"];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
-        "Hey, " + playerName + ". Can I ask you something?",
-        "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
-    
-        var playerEndingA = [];
-        var playerEndingB = [];
+        var gameScript = [
+          "Hey...I think we're locked. Peter probably did this.",
+          "",
+          "Peter is probably mad at our work performance.",
+          "",
+          "Are you supposed to be my replacement? Oh my god! I can't believe it!" ,"" ,
+          "I'm never good enough!",
+          "I have disappointed Peter.",
+          "I have disappointed this company.",
+          "",
+          ""];
+        var playerScriptA = [
+          "Nonsense. Leader wouldn’t do something so careless.",
+          "Maybe he’s mad at you, but I’ve been putting in the effort as much as I could. Why would he be mad at me?",
+          "Yes. He asked me because you obviously need time off.",
+          "Calm down. Spamming me isn’t going to get anything done. You’re only proving Leader’s point by doing this."];
+        var playerScriptB = [
+          "What? Why would you think that?",
+          "Come on. Peter's a bit of a workaholic, but he wouldn’t mess with us like that.",
+          "Yes, he asked me about that, but maybe we should focus more on getting our doors unlocked.",
+          "Slow down. I’m sorry, Pat. Talk to me. What exactly is going on?"];
         var part = 0;
         var stage = 0;
         var n = 100;

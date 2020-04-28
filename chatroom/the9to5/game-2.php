@@ -298,8 +298,6 @@ if (!isset($_SESSION['user'])) {
           "Stress can get the best of us. At least it’s all over and the job is done.",
           "Sounds good! See you there!",
           "Go to Episode 3" ];
-        var playerEndingA = [];
-        var playerEndingB = [];
         var part = 0;
         var stage = 0;
         var n = 100;
