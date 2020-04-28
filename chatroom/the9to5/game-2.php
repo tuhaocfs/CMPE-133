@@ -274,28 +274,9 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["", playerName + ". I was going to ask you to send those to me.",
-        "I’m glad that you are working efficiently. Say, how do you like the company so far? ", "",
-        "It’s best that you adapt yourself to work quicker. The workload isn’t slowing down any time soon.",
-        "",
-        "I’m glad that you are at least acclimating to our environment.",
-        "Hm, I just received your documents and there’s an error in it. All the calculations are wrong because of it. Get this corrected, will you?", "",
-        "I want it done now. I don’t care if you have to skip lunch or stay late for it. ",
-         "Anyways, I want to let you know that we have a big presentation for a project coming up and you will be working with Pat. You’ve heard of him? ", "",
-         "Well, whatever your thoughts on him are, you’ll be working with him. He’s one of our new full times but he’s new like you.",
-         "new"];
-        var playerScriptA = ["*send documents*",
-        "Going well. Happy to contribute.",
-        "I'll do my best at all cost. You can leave it to me!",
-        "Right away!" ,
-        "No, I haven’t gotten a chance to meet with him because I’ve been too occupied with work.",
-        "Go to Episode 2"];
-        var playerScriptB = ["*send documents*",
-        "It’s hard to keep up sometimes.",
-        "I'll do my best but it will be a challenge.",
-        "I'll get back to you after lunch.",
-        "I’ve talked to him during lunch. He’s pretty cool. It’s weird that he’s the only one who was willing to talk with me though...",
-        "Go to Episode 2"];
+        var gameScript = ["Thank you " + playerName + "!","", "Sorry about the panic attack! Peter was not too happy about it.", "", "Yeah... Anyways, do you want to go out and eat with the group to celebrate?", "", "Okay, see you next time."];
+        var playerScriptA = ["I’m happy to be of help. Don’t worry about it.", "You should toughen up. That’s why he was so hard on you. You’ll do a better job next time.", "Sure!" ];
+        var playerScriptB = ["It’s kind of weird that you just had a panic attack like that.","Hey, the stress can get to any of us. At least we got past it and you got the job done. Silver lining.", "Sorry, but there’s other work for Leader that I’ve got to catch up on." ];
         var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
         "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
         "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
@@ -428,7 +409,7 @@ if (!isset($_SESSION['user'])) {
               document.getElementById("2").addEventListener("click", newStory);
               break;
             }
-            insertChat("peter", gameScript[stage], n);
+            insertChat("pat", gameScript[stage], n);
             n = n + 1000;
           }
         }
