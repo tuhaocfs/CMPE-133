@@ -415,7 +415,7 @@ if (!isset($_SESSION['user'])) {
         }
 
         function newStory(elem) {
-          window.location.href = 'http://localhost/chatroom/the9to5/game-1.php';
+          window.location.href = 'http://localhost/chatroom/the9to5/game-3.php';
           part++;
           stage++;
           //document.getElementById("1").removeEventListener("click", newStory);
