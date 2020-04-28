@@ -409,7 +409,7 @@ if (!isset($_SESSION['user'])) {
               break;
             }
             insertChat("peter", gameScript[stage], n);
-            n = n + 1000;
+            n = n + 500;
           }
         }
 
@@ -437,6 +437,7 @@ if (!isset($_SESSION['user'])) {
           }
           part++;
           stage++;
+          n = n + 100; 
           document.getElementById("1").removeEventListener("click", chooseOption);
           document.getElementById("2").removeEventListener("click", chooseOption);
           runChat();

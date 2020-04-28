@@ -135,9 +135,9 @@ h1 {
 <div class="row">
   <div class="columnleft">
     <div class="card">
-      <img src="images/profile-brian.jpg" alt="brian" style="width:100%">
+      <img src="images/profile-bri.jpg" alt="brian" style="width:100%">
       <div class="container">
-        <h2>Brian Albert Rendoloza</h2>
+        <h2>Brian Albert Redoloza</h2>
         <p class="title">Team Member</p>
         <p>It was fun creating the story for this adventure!</p>
         <p>GitHub: Redoloza-BrianAlbert</p>
