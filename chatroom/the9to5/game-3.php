@@ -274,41 +274,39 @@ if (!isset($_SESSION['user'])) {
         var bCount = 0;
         var nullCount = 0;
         var episodes = 0;
-        var gameScript = ["", playerName + ". I was going to ask you to send those to me.",
-        "I’m glad that you are working efficiently. Say, how do you like the company so far? ", "",
-        "It’s best that you adapt yourself to work quicker. The workload isn’t slowing down any time soon.",
-        "",
-        "I’m glad that you are at least acclimating to our environment.",
-        "Hm, I just received your documents and there’s an error in it. All the calculations are wrong because of it. Get this corrected, will you?", "",
-        "I want it done now. I don’t care if you have to skip lunch or stay late for it. ",
-         "Anyways, I want to let you know that we have a big presentation for a project coming up and you will be working with Pat. You’ve heard of him? ", "",
-         "Well, whatever your thoughts on him are, you’ll be working with him. He’s one of our new full times but he’s new like you.",
-         "new"];
-        var playerScriptA = ["*send documents*",
-        "Going well. Happy to contribute.",
-        "I'll do my best at all cost. You can leave it to me!",
-        "Right away!" ,
-        "No, I haven’t gotten a chance to meet with him because I’ve been too occupied with work.",
-        "Go to Episode 2"];
-        var playerScriptB = ["*send documents*",
-        "It’s hard to keep up sometimes.",
-        "I'll do my best but it will be a challenge.",
-        "I'll get back to you after lunch.",
-        "I’ve talked to him during lunch. He’s pretty cool. It’s weird that he’s the only one who was willing to talk with me though...",
-        "Go to Episode 2"];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
-        "Hey, " + playerName + ". Can I ask you something?",
-        "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
+        var gameScript = [
+          "Hello, " + playerName + ".",
+          "I just want to personally congratulate you for completing that project in such a timely manner.",
+          "",
+          "I'm glad I have an employee like you. You're such a hard-worker despite being an intern!",
+          "You've exceeded my expectations.",
+          "Unlike that incompetent Pat. Always having nervous breakdowns, not dedicating himself fully to our company...",
+          "",
+          "Pat's efficiency has been waning. He is not performing as well as the company and I personally think is good enough.",
+          "I hope this behavior doesn't rub off on you.",
+          "",
+          "Pat will be dealt with accordingly. But that being said, we may have to consider replacing him if he keeps this up.",
+          "So, would you like to replace Pat? It's more responsibilities but I think you're way better than Pat himself.",
+          "",
+          "Also, I almost forgot. I need you to stay in the office late. We have a major project coming up that needs to be done ASAP.",
+          "",
+          "Thank you for your hard work. It's good to have a hard-working employee like you.",
+          "And don't worry about sleep. We'll be setting up a bed for you in your office space before 3pm today.",
+          "new"];
+          var playerScriptA = [
+            "Of course. What's the next project on? Send it to me right away!",
+            "I agree. Pat has flaws that are detrimental to the company.",
+            "I'm sure Pat is still a hard-worker. Efficiency will improve eventually.",
+            "I'm interested. If Pat has been lacking, I promise to pick up the slack.",
+            "You got it, sir! I'll get on it right now!",
+            "Go to Episode 4"];
+            var playerScriptB = [
+              "I'm happy you think it's well done. It did take longer than I thought...",
+              "Don't be so harsh on Pat, Mr. Pearson.",
+              "Is Pat okay? I haven't heard much from him lately.",
+              "I'm honored for the offer, but is Pat really doing that badly?",
+              "I scheduled a day off tomorrow. But if it's that important...",
+              "Go to Episode 4"];
         var playerEndingA = [];
         var playerEndingB = [];
         var part = 0;
@@ -321,9 +319,6 @@ if (!isset($_SESSION['user'])) {
 
         var you = {};
         you.avatar = "../images/player.png";
-
-        var pat = {};
-        pat.avatar = "../images/pat.png";
 
         function formatAMPM(date) {
             var hours = date.getHours();
@@ -354,17 +349,6 @@ if (!isset($_SESSION['user'])) {
                                     '</div>' +
                                 '</div>' +
                             '</li>';
-            }
-            else if (who == "pat") {
-              control = '<li style="width:100%">' +
-                              '<div class="msj macro">' +
-                              '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ pat.avatar +'" /></div>' +
-                                  '<div class="text text-l">' +
-                                      '<p>'+ text +'</p>' +
-                                      '<p><small>'+date+'</small></p>' +
-                                  '</div>' +
-                              '</div>' +
-                          '</li>';
             }
             else{
                 control = '<li style="width:100%;">' +
@@ -434,7 +418,7 @@ if (!isset($_SESSION['user'])) {
         }
 
         function newStory(elem) {
-          window.location.href = 'http://localhost/chatroom/the9to5/game-1.php';
+          window.location.href = 'http://localhost/chatroom/the9to5/game-4.php';
           part++;
           stage++;
           //document.getElementById("1").removeEventListener("click", newStory);
