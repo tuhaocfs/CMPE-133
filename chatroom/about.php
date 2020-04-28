@@ -19,15 +19,28 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-.column {
+.row {
+  width: 1700px;
+  height: 700px;
+}
+.columnleft, .columnright {
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
-  padding: 0 8px;
 }
+
+.columnleft {
+  margin-left: 200px;
+}
+
+.columnright {
+  margin-top: -688px;
+  margin-left: 850px;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  width: 490px;
 }
 .about-section {
   padding: 100px;
@@ -41,6 +54,7 @@ html {
   padding: 70px;
   background-color: rgba(0,12,38, 0.6);
 }
+
 .container {
   padding: 0 16px;
 }
@@ -117,20 +131,20 @@ h1 {
       To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a></p>
   </div>
 </div>
-<h2 style="text-align:center; padding-top: 20px;">Our Team Members</h2>
+<h2 style="text-align:center; padding-top: 20px; padding-bottom: 10px;">Our Team Members</h2>
 <div class="row">
-  <div class="column">
+  <div class="columnleft">
     <div class="card">
       <img src="images/profile-brian.jpg" alt="brian" style="width:100%">
       <div class="container">
         <h2>Brian Albert Rendoloza</h2>
         <p class="title">Team Member</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>I love creating the story for this application.</p>
         <p>GitHub: Redoloza-BrianAlbert</p>
       </div>
     </div>
   </div>
-  <div class="column">
+  <div class="columnright">
     <div class="card">
       <img src="images/profile-risha.jpg" alt="risha" style="width:100%">
       <div class="container">
@@ -141,29 +155,30 @@ h1 {
       </div>
     </div>
   </div>
-  <div class="column">
+</div>
+<div class="row">
+  <div class="columnleft">
     <div class="card">
       <img src="images/profile_Yenni.jpg" alt="yenni" style="width:100%">
       <div class="container">
         <h2>Yenni Lam</h2>
         <p class="title">Team Member</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>It's amazing how code can make so many things!</p>
         <p>GitHub: YenniLamb</p>
       </div>
     </div>
   </div>
-</div>
-<div class="column">
-  <div class="card">
-    <img src="images/profile-uyen.jpg" alt="uyen" style="width:100%">
-    <div class="container">
-      <h2>Uyen Nguyen</h2>
-      <p class="title">Team Member</p>
-      <p>Programming excites me because I get to learn and challenge myself every day.</p>
-      <p>GitHub: uyen-carolyn</p>
+  <div class="columnright">
+    <div class="card">
+      <img src="images/profile-uyen.jpg" alt="uyen" style="width:100%">
+      <div class="container">
+        <h2>Uyen Nguyen</h2>
+        <p class="title">Team Member</p>
+        <p>Creating this app was a blast! I hope you enjoyed it!</p>
+        <p>GitHub: uyen-carolyn</p>
+      </div>
     </div>
   </div>
-</div>
 </div>
 </body>
 </html>
