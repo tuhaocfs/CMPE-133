@@ -16,17 +16,23 @@ body {
 .login-box {
   max-width: 700px;
   float: none;
-  margin: 40px 255px auto;
+  margin: -30px 255px auto;
+}
+.row {
+  width: 900px;
+  height: 400px;
 }
 .login-left {
   background: rgba(211, 211, 211, 0.5);
   padding: 50px;
+  padding-bottom: 25px;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 .login-right {
   background: #fff;
   padding: 50px;
+  padding-bottom: 25px;
   border-top-right-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
 }
@@ -48,7 +54,7 @@ h1 {
 h5 {
   text-align: center;
   margin: 50px auto;
-  font-size: 50px;
+  font-size: 55px;
   font-family: 'Montserrat', sans-serif;
   color: white;
   border-right: solid 5px rgb(255,255,255);
@@ -59,7 +65,7 @@ h5 {
 }
 @keyframes animated-text{ /*text animation*/
   from{width: 0px;}
-  to{width: 780px;}
+  to{width: 790px;}
 }
 @keyframes animated-cursor{ /* cursor animations */
   from{border-right-color: rgb(255,255,255);}
