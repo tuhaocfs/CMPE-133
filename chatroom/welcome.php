@@ -2,24 +2,12 @@
 // welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
 session_start();
 
+include('db-connect.php');
+
 if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
-
-/*
-$con = mysqli_connect('localhost', 'root', 'rybu1');
-mysqli_select_db($con, 'registration');
-
-//$query = "SELECT name FROM user_table WHERE uname = '" . $_SESSION['user'] ."'"
-
-$name = " SELECT name FROM user_table";
-$results = mysqli_query($con, $name);
-$row = mysqli_fetch_assoc($results);
-
-$_SESSION['name'] = $row['user_table'];*/
-//$_SESSION['name'] = $name;
-
 ?>
 
 <!-- Original Code from Yenni Lam https://repl.it/@yennilam/webCamS-->
@@ -27,7 +15,7 @@ $_SESSION['name'] = $row['user_table'];*/
 <html lang="en">
 
 <head>
-  <title>Welcome, <?php echo $_SESSION['pname']?></title>
+  <title>Welcome, <?php echo $_SESSION['pname']?>.</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -80,6 +68,26 @@ footer{
   padding-top: 9px;
   padding-left: 18px;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>
 <body>
   <!--  navbar  on the top  -->
@@ -130,8 +138,8 @@ footer{
          <img src="images/slideshow-1.jpg" style = "filter: blur(3px);" class="d-block w-100" alt="9 to 5 story">
         <div class="carousel-caption d-none d-md-block" style="background-color: rgba(53,49,117, 0.6)" >
           <h3 class="display-4"><b>How Do I Play?</b></h3>
-          <p class="lead"><b>It's easy! Simply choose the option that fits you the best for each scenario!<br>
-            Save your current status at any time and come back when you're ready to play again!</b></p>
+          <p class="lead"><b>It's easy! Simply choose the option that fits you the best for each scenario.<br>
+            Save your current status at any time and come back when you're ready to play again.</b></p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
@@ -162,8 +170,8 @@ footer{
       <h5 class="card-title">The 9 to 5</h5>
       <p class="card-text">You're a newly hired intern working for The Collective Intelligence Company (CIC). CIC believes the best way to advance is to make sure everything is in order and everyone is collaborating well. That's sounds pretty great, until...</p>
       <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
-       <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary">Start Game</a>
-       <a href="http://localhost/chatroom/the9to5/game-1.php" class="btn btn-primary btn-md pull-right">Continue Game</a>
+       <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary" id = "start" onclick="changeProgress(this)">Start Game</a>
+       <a href="" class="btn btn-primary btn-md pull-right" id = "continue" onclick="changeProgress(this)">Continue Game</a>
      </div>
     </div>
   </div>
@@ -200,4 +208,48 @@ footer{
   <p class="footp">This webpage belongs to CMPE 133 Team 1 @ SJSU. This project is licensed under the MIT License.</p>
 </footer>
 </body>
+<script>
+var startLink = "http://localhost/chatroom/the9to5/game.php";
+var continueLink = "";
+var state;
+var aCount;
+var bCount;
+
+function reset() {
+  localStorage.setItem(continueLink, startLink);
+  localStorage.setItem(state, 0);
+  localStorage.setItem(aCount, 0);
+  localStorage.setItem(bCount, 0);
+}
+
+function getCurrentProg() {
+    localStorage.getItem("continueLink");
+}
+
+function changeProgress(elem) {
+  switch(elem.id) {
+    case 'start':
+      reset();
+    break;
+
+    case '2':
+      getCurrentProg();
+    break;
+  }
+
+function setLinks(){
+     var all_links = document.getElementById("container").innerHTML;
+     localStorage.setItem("savedLinkHTML", all_links);
+}
+function getLinks(){
+    var all_links = localStorage.getItem("savedLinkHTML");
+    if(all_links) document.getElementById("container").innerHTML = all_links;
+}
+window.onload = function(){
+    getLinks();
+}
+window.onunload = function(){
+    setLinks();
+}
+</script>
 </html>

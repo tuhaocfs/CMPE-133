@@ -73,6 +73,16 @@ img {
 a {
   color: white;
 }
+
+.repo {
+  color: #DCC48E;
+}
+
+.repo:hover {
+  color: #446DF6;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -92,11 +102,31 @@ h1 {
 }
 @keyframes animated-text{ /*text animation*/
   from{width: 0px;}
-  to{width: 500px;}
+  to{width: 475px;}
 }
 @keyframes animated-cursor{ /* cursor animations */
   from{border-right-color: rgb(255,255,255);}
   to{border-right-color: transparent;}
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>
 <body>
@@ -125,10 +155,10 @@ h1 {
   </nav>
 <div class="about-section">
   <div class="about-text">
-    <h1>About the Team</h1>
+    <h1>About the Team.</h1>
     <p style="font-size:20px;">Our web application is a class project for our Spring 2020 Software Engineering II class (CMPE 133) at SJSU.<br>
       This class project consists of creating a web application of our choice using any language and operating system platform.<br>
-      To view our code, check out our repository <a href="https://github.com/uyen-carolyn/CMPE-133">here!</a></p>
+      To view our project's full code, <a class="repo" href="https://github.com/uyen-carolyn/CMPE-133"> click here to check out our repository!</a></p>
   </div>
 </div>
 <h2 style="text-align:center; padding-top: 20px; padding-bottom: 10px;">Our Team Members</h2>

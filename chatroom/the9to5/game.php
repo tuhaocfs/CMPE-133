@@ -269,7 +269,7 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script>
         // scripts to be filled in
-        var playerName = '<?php echo $_SESSION['user'];?>';
+        var playerName = '<?php echo $_SESSION['pname'];?>';
         var aCount = 0;
         var bCount = 0;
         var nullCount = 0;
@@ -386,44 +386,45 @@ if (!isset($_SESSION['user'])) {
         })
 
         //-- Print Messages
-
         function runChat() {
-          //$("#options").hide();
+          $("#options").hide();
+          console.log("HIDE FROM START hiding display: " + $('#options').css('display'));
+          console.log("HIDE FROM START hiding visibility: " + $('#options').css('visibility'));
           for (; stage < gameScript.length; stage++) {
             console.log('looping: ',stage);
             if (gameScript[stage] == "") {
+              console.log("Time for user to respond.")
+              $("#options").show();
               document.getElementById("1").value = playerScriptA[part];
               document.getElementById("2").value = playerScriptB[part];
-              //$("#options").show();
               document.getElementById("1").addEventListener("click", chooseOption);
               document.getElementById("2").addEventListener("click", chooseOption);
-
+              console.log("USER showing display: " + $('#options').css('display'));
+              console.log("USER showing hiding visibility: " + $('#options').css('visibility'));
               break;
             }
             else if (gameScript[stage] == "new") {
+              $("#options").show();
               document.getElementById("1").value = playerScriptA[part];
               document.getElementById("2").value = playerScriptB[part];
-
               document.getElementById("1").addEventListener("click", newStory);
               document.getElementById("2").addEventListener("click", newStory);
               break;
             }
+            console.log("NPC hiding display: " + $('#options').css('display'));
             insertChat("peter", gameScript[stage], n);
-            n = n + 500;
+            n = n + 1000;
           }
         }
 
         function newStory(elem) {
+          $("#options").show();
           window.location.href = 'http://localhost/chatroom/the9to5/game-1.php';
           part++;
           stage++;
-          //document.getElementById("1").removeEventListener("click", newStory);
-          //document.getElementById("2").removeEventListener("click", newStory);
         }
 
-
         function chooseOption(elem) {
-          $("#options").show();
           switch(elem.id) {
             case '1':
               insertChat("you", playerScriptA[part], 0);
@@ -435,9 +436,10 @@ if (!isset($_SESSION['user'])) {
               bCount++;
             break;
           }
+          $("#options").hide();
           part++;
           stage++;
-          n = n + 100; 
+          n = n + 100;
           document.getElementById("1").removeEventListener("click", chooseOption);
           document.getElementById("2").removeEventListener("click", chooseOption);
           runChat();
