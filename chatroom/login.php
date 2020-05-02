@@ -16,7 +16,7 @@ body {
 .login-box {
   max-width: 700px;
   float: none;
-  margin: -30px 255px auto;
+  margin: -10px 255px auto;
 }
 .row {
   width: 900px;
@@ -25,14 +25,14 @@ body {
 .login-left {
   background: rgba(211, 211, 211, 0.5);
   padding: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 .login-right {
   background: #fff;
   padding: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
   border-top-right-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
 }
@@ -92,6 +92,10 @@ button:hover {
         <h2> Login Here</h2>
         <form action="validation.php" method="post">
           <div class="form-group">
+            <label>Player Name</label>
+            <input type="text" name="pname" class="form-control" required>
+          </div>
+          <div class="form-group">
             <label>Username</label>
             <input type="text" name="user" class="form-control" required>
           </div>
@@ -109,10 +113,6 @@ button:hover {
           <div class="form-group">
             <label>Username</label>
             <input type="text" name="user" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control" required>
           </div>
           <div class="form-group">
             <label>Email</label>

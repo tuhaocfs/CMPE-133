@@ -8,8 +8,8 @@ $con = mysqli_connect('localhost', 'root', 'rybu1');
 mysqli_select_db($con, 'registration');
 
 $uname = $_POST['user'];
+$name = $_POST['pname'];
 $pass = $_POST['password'];
-//$name = $_POST['name'];
 
 $u = " SELECT * FROM user_table WHERE uname = '$uname'";
 $p = " SELECT * FROM user_table WHERE password = '$pass'";
@@ -21,6 +21,7 @@ $nump = mysqli_num_rows($rp);
 
 if ($numu == 1 && $nump == 1) {
   $_SESSION['user'] = $uname;
+  $_SESSION['pname'] = $name;
   header('location:welcome.php');
 }
 

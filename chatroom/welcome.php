@@ -1,10 +1,25 @@
 <?php
 // welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
 session_start();
+
 if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+
+/*
+$con = mysqli_connect('localhost', 'root', 'rybu1');
+mysqli_select_db($con, 'registration');
+
+//$query = "SELECT name FROM user_table WHERE uname = '" . $_SESSION['user'] ."'"
+
+$name = " SELECT name FROM user_table";
+$results = mysqli_query($con, $name);
+$row = mysqli_fetch_assoc($results);
+
+$_SESSION['name'] = $row['user_table'];*/
+//$_SESSION['name'] = $name;
+
 ?>
 
 <!-- Original Code from Yenni Lam https://repl.it/@yennilam/webCamS-->
@@ -12,7 +27,7 @@ if (!isset($_SESSION['user'])) {
 <html lang="en">
 
 <head>
-  <title>Welcome, <?php echo $_SESSION['user']; ?></title>
+  <title>Welcome, <?php echo $_SESSION['pname']?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -52,6 +67,18 @@ h4 {
 .btn-primary:hover {
 	background-color: #002B79 !important;
   border-color: #002B79 !important;
+}
+footer{
+  margin-top: 40px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  height: 65px !important;
+  background-color: #021631 !important;
+}
+.footp {
+  color: white;
+  padding-top: 9px;
+  padding-left: 18px;
 }
 </style>
 <body>
@@ -94,7 +121,7 @@ h4 {
          <img src="images/slideshow-1.jpg" style = "filter: blur(5px);" class="d-block w-100" alt="9 to 5 story">
         <div class="carousel-caption d-none d-md-block" style="background-color: rgba(53,49,117, 0.6)" >
           <h3 class="display-4"><b>What is Chatroom Adventures?</b></h3>
-          <p class="lead"><b>Chatroom Adventures is a "choose-your-own-adventure" web application where YOU choose how the story goes. <br>
+          <p class="lead"><b>Chatroom Adventures is a "choose-your-own-adventure" web application. <br>
             Choose your options, make friends or foes, the sky's the limit.</b></p>
         </div>
       </div>
@@ -104,7 +131,7 @@ h4 {
         <div class="carousel-caption d-none d-md-block" style="background-color: rgba(53,49,117, 0.6)" >
           <h3 class="display-4"><b>How Do I Play?</b></h3>
           <p class="lead"><b>It's easy! Simply choose the option that fits you the best for each scenario!<br>
-            Can't play it all in one sitting? Save your current status at any time and come back when you're ready to play again!</b></p>
+            Save your current status at any time and come back when you're ready to play again!</b></p>
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
@@ -141,7 +168,21 @@ h4 {
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/allie.jpg" alt="default">
+    <img class="card-img-top" src="images/three-pigs.jpg" alt="default">
+    <div class="card-body">
+      <h5 class="card-title">The Three Little Pigs</h5>
+      <p class="card-text">A classic twist on the nursery tale "The Three Little Pigs". You're the third little piggy trying to build the best house possible- but it's not as easy as it looks. And with a looming threat coming in, would you and your house be able to survive?</p>
+      <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
+       <a href="#putyourlinkhere" class="btn btn-primary">Start Game</a>
+       <a href="#putyourlinkhere" class="btn btn-primary btn-md pull-right">Continue Game</a>
+     </div>
+    </div>
+<!--     <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div> -->
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/allie-cs.jpg" alt="default">
     <div class="card-body">
       <h5 class="card-title">My Name is Allie</h5>
       <p class="card-text">Your professor wants you to test out his application when you meet another tester on the server. Her name is Allie, and she wants to be your friend. But who is she? What is she?</p>
@@ -149,24 +190,14 @@ h4 {
     <div class="card-footer">
       <small class="text-muted" style="padding-left: 200px;">Coming soon!!!</small>
     </div>
-<!--     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div> -->
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="images/coming-soon.jpg" alt="default">
-    <div class="card-body">
-      <h5 class="card-title">Coming Soon</h5>
-      <p class="card-text">We're sorry, but this game is currently not available right now. Come back next time and see if this game is available tomorrow.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted" style="padding-left: 200px;">Coming soon!!!</small>
-    </div>
   </div>
 </div>
 <!-- Page Content -->
-<section class="py-5">
-    <h8 class="lead">This webpage belongs to CMPE 133 Team 1 @ SJSU. </h8>
-</section>
+<!--section class="py-5">
+    <h8>This webpage belongs to CMPE 133 Team 1 @ SJSU. </h8>
+</section-->
+<footer>
+  <p class="footp">This webpage belongs to CMPE 133 Team 1 @ SJSU. This project is licensed under the MIT License.</p>
+</footer>
 </body>
 </html>
