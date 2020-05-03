@@ -6,6 +6,11 @@ if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+
+$myFile = "saveFile.txt";
+$lines = file($myFile); //file in to an array
+$a = $lines[1];
+$b = $lines[2];
 ?>
 <!-- game code based on https://bootsnipp.com/tags/chat-->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -20,9 +25,6 @@ if (!isset($_SESSION['user'])) {
   <title>The 9 to 5</title>
   <link rel="icon" href="../images/favicon.ico">
   <style>
-  /*.mytext{
-      border:0;padding:10px;background:whitesmoke;
-  }*/
   body {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -58,8 +60,6 @@ if (!isset($_SESSION['user'])) {
       border-radius:5px;
       padding:5px;
       display:flex;
-
-
   }
   .textbox {
     width: 965px;
@@ -193,7 +193,6 @@ if (!isset($_SESSION['user'])) {
   .topnav {
     overflow: hidden;
     background-color: #20647B;
-    /*font: 'Montserrat', sans-serif;*/
     font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 57px;
   }
@@ -242,9 +241,9 @@ if (!isset($_SESSION['user'])) {
         </div>
           <div class="rightnav">
             <a href="http://localhost/chatroom/logout.php">Logout</a>
-            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
-            <a href="#about"  onclick="saveGame()" id="save">Save</a>
-            <a class="active" href="#home">The 9 to 5</a>
+            <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
+            <a href="#"  onclick="saveGame()" id="save">Save</a>
+            <a class="active" href="#">The 9 to 5</a>
           </div>
       </div>
     </div>
@@ -260,7 +259,6 @@ if (!isset($_SESSION['user'])) {
                       </div>
                     </div>
                     <div style="padding-top:3px; padding-left:135px;">
-                        <!--span class="glyphicon glyphicon-share-alt"></span-->
                          <img src="../images/send.jpg" alt="send btn">
                     </div>
                 </div>
@@ -268,12 +266,9 @@ if (!isset($_SESSION['user'])) {
             </div>
         </div>
         <script>
-        // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
-        var aCount = 0;
-        var bCount = 0;
-        var nullCount = 0;
-        var episodes = 0;
+        var aCount = <?php echo $a; ?>;
+        var bCount = <?php echo $b; ?>;
         var gameScript = [
           "Thank you " + playerName + "!",
           "If it weren’t for you, we wouldn’t have such a successful presentation. ",
@@ -298,12 +293,9 @@ if (!isset($_SESSION['user'])) {
           "Stress can get the best of us. At least it’s all over and the job is done.",
           "Sounds good! See you there!",
           "Go to Episode 3" ];
-        var playerEndingA = [];
-        var playerEndingB = [];
         var part = 0;
         var stage = 0;
         var n = 100;
-        //var gameProgress = {stage: stage, part: part, a: aCount, b: bCount}; // game progress
 
         var peter = {};
         peter.avatar = "../images/boss.png";
@@ -372,14 +364,6 @@ if (!isset($_SESSION['user'])) {
 
         }
 
-        function resetChat(){
-            $("ul").empty();
-            // currently set to zero for debug
-            aCount = 0;
-            bCount = 0;
-            part = 0;
-        }
-
         $(".mytext").on("keydown", function(e){
             if (e.which == 13){
                 var text = $(this).val();
@@ -426,8 +410,6 @@ if (!isset($_SESSION['user'])) {
           window.location.href = 'http://localhost/chatroom/the9to5/game-3.php';
           part++;
           stage++;
-          //document.getElementById("1").removeEventListener("click", newStory);
-          //document.getElementById("2").removeEventListener("click", newStory);
         }
 
 
@@ -453,22 +435,15 @@ if (!isset($_SESSION['user'])) {
 
         //-- NOTE: No use time on insertChat.
 
-        function goBack() {
-          var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-          if (answer) {
-            window.location="http://localhost/chatroom/welcome.php";
-          }
-          else {
-            return false;
-          }
-           document.getElementById("goback").innerHTML = answer;
-        }
-
         function saveGame() {
-          alert("Your game has been saved!");
+          var url = "http://localhost/chatroom/the9to5/game-2.php";
+          var data1 = aCount;
+          var data2 = bCount;
+          $.post('test.php', {url: url, data1: data1, data2: data2}, function() {
+            alert("Your game has been saved.");
+          });
         }
 
-        resetChat();
         runChat();
         </script>
     </body>

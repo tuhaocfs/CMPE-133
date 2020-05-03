@@ -2,15 +2,16 @@
 // welcome code based on https://www.youtube.com/watch?v=NXAHkqiIepc
 session_start();
 
-include('db-connect.php');
-
 if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
-$myfile = fopen("the9to5/saveFile.txt", "r");
-$line = fgets($myfile);
-fclose($myfile);
+
+$myFile = "the9to5/saveFile.txt";
+$lines = file($myFile);//file in to an array
+$url = $lines[0];
+$a = $lines[1];
+$b = $lines[2];
 ?>
 
 <!-- Original Code from Yenni Lam https://repl.it/@yennilam/webCamS-->
@@ -174,7 +175,7 @@ footer{
       <p class="card-text">You're a newly hired intern working for The Collective Intelligence Company (CIC). CIC believes the best way to advance is to make sure everything is in order and everyone is collaborating well. That's sounds pretty great, until...</p>
       <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
        <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary" id = "start" onclick="startOver()">Start Game</a>
-       <a href="<?php echo $line; ?>" class="btn btn-primary btn-md pull-right" id = "continue" onclick="resume()">Continue Game</a>
+       <a href="<?php echo $url; ?>" class="btn btn-primary btn-md pull-right" id = "continue" onclick="resume()">Continue Game</a>
      </div>
     </div>
   </div>
@@ -223,7 +224,6 @@ function startOver() {
     fclose($myfile);
   ?>
 }
-
 function resume() {
 
 }

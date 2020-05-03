@@ -6,6 +6,11 @@ if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+
+$myFile = "saveFile.txt";
+$lines = file($myFile); //file in to an array
+$a = $lines[1];
+$b = $lines[2];
 ?>
 <!-- game code based on https://bootsnipp.com/tags/chat-->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -240,12 +245,12 @@ if (!isset($_SESSION['user'])) {
         <div class="leftnav">
           <a href="#">Chatroom Adventures</a>
         </div>
-          <div class="rightnav">
-            <a href="http://localhost/chatroom/logout.php">Logout</a>
-            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
-            <a href="#about"  onclick="saveGame()" id="save">Save</a>
-            <a class="active" href="#home">The 9 to 5</a>
-          </div>
+        <div class="rightnav">
+          <a href="http://localhost/chatroom/logout.php">Logout</a>
+          <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
+          <a href="#"  onclick="saveGame()" id="save">Save</a>
+          <a class="active" href="#">The 9 to 5</a>
+        </div>
       </div>
     </div>
         <div class="col-sm-3 col-sm-offset-4 frame">
@@ -260,7 +265,6 @@ if (!isset($_SESSION['user'])) {
                       </div>
                     </div>
                     <div style="padding-top:3px; padding-left:135px;">
-                        <!--span class="glyphicon glyphicon-share-alt"></span-->
                          <img src="../images/send.jpg" alt="send btn">
                     </div>
                 </div>
@@ -270,47 +274,35 @@ if (!isset($_SESSION['user'])) {
         <script>
         // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
-        var aCount = 0;
-        var bCount = 0;
-        var nullCount = 0;
-        var episodes = 0;
-        var gameScript = ["", playerName + ". I was going to ask you to send those to me.",
-        "I’m glad that you are working efficiently. Say, how do you like the company so far? ", "",
-        "It’s best that you adapt yourself to work quicker. The workload isn’t slowing down any time soon.",
+        var aCount = <?php echo $a; ?>;
+        var bCount = <?php echo $b; ?>;
+        var gameScript = ["Hi, " + playerName + ".",
+        "I just want to personally congratulate you for completing that project in such a timely manner." ,
         "",
-        "I’m glad that you are at least acclimating to our environment.",
-        "Hm, I just received your documents and there’s an error in it. All the calculations are wrong because of it. Get this corrected, will you?", "",
-        "I want it done now. I don’t care if you have to skip lunch or stay late for it. ",
-         "Anyways, I want to let you know that we have a big presentation for a project coming up and you will be working with Pat. You’ve heard of him? ", "",
-         "Well, whatever your thoughts on him are, you’ll be working with him. He’s one of our new full times but he’s new like you.",
+        "I’m glad I have an employee like you. You’ve exceeded my expectations.",
+        "Unlike that incompetent Pat.",
+        "Always having nervous breakdowns, not dedicating himself fully to our company...",
+        "I hope this behavior doesn’t rub off on you. ",
+        "",
+        "Pat will be dealt with accordingly. We may have to consider replacing him if he keeps this up.",
+        "So, would you like to replace Pat and be full time?",
+        "",
+        "Also, I almost forgot.",
+        "I need you to stay in the office late. We have a major project coming up that needs to be done ASAP.",
+        "",
+        "Thank you for your hard work. It’s good to have a hard-working employee like you.",
+        "And don’t worry about sleep. We’ll be setting up a bed for you in your office space before 3pm today.",
          "new"];
-        var playerScriptA = ["*send documents*",
-        "Going well. Happy to contribute.",
-        "I'll do my best at all cost. You can leave it to me!",
-        "Right away!" ,
-        "No, I haven’t gotten a chance to meet with him because I’ve been too occupied with work.",
-        "Go to Episode 2"];
-        var playerScriptB = ["*send documents*",
-        "It’s hard to keep up sometimes.",
-        "I'll do my best but it will be a challenge.",
-        "I'll get back to you after lunch.",
-        "I’ve talked to him during lunch. He’s pretty cool. It’s weird that he’s the only one who was willing to talk with me though...",
-        "Go to Episode 2"];
-        var gameEndingA = ["Hey, boss. I'm sorry about what happened in the last meeting.",
-        "I know. I know. Thanks to your talks on efficieny, I think I'm becoming a better worker.",
-        "Boss, can I ask you something?", "What ever happend to Mr. Pearson?",
-        "You don't have to be so callous about it.",
-        "But isn't it weird that we never heard from him right before you took his job? And when we did, it was from the news saying that he was found in the river nearby the office? I heard from the other workers that there was something fishy about it.",
-        "Right, of course.", "I will say, I kinda like you better than Mr. Pearson. You're nicer."];
-        var gameEndingB = ["Woah, you're still on here?",
-        "Especially what happened.",
-        "Same here! Did you hear the results of the court-hearing? Mr. Pearson and the higher-ups of CIC are sentenced to life!",
-        "Right, I forgot that. I'm sorry",
-        "Hey, " + playerName + ". Can I ask you something?",
-        "How did you find me? When you came to get me, you looked like you went through a lot... what did they do to you?",
-        "Yeah! See you tomorrow at 2?"];
-        var playerEndingA = [];
-        var playerEndingB = [];
+        var playerScriptA = ["Of course. What’s the next project on? Send it to me right away!",
+        "Efficiency will improve eventually. Pat will prevail.",
+        "I’m interested. Pat is really slacking.",
+        "You got it, sir! Right away!" ,
+        "Go to Episode 4"];
+        var playerScriptB = ["I’m happy you think it’s well done. It did take longer than I thought...",
+        "Those are realy harsh words, sir. Pat is human.",
+        "I'm honored, but is Pat really that bad?",
+        "I had a day off planned but if it's that necessary...",
+        "Go to Episode 4"];
         var part = 0;
         var stage = 0;
         var n = 100;
@@ -383,14 +375,6 @@ if (!isset($_SESSION['user'])) {
 
         }
 
-        function resetChat(){
-            $("ul").empty();
-            // currently set to zero for debug
-            aCount = 0;
-            bCount = 0;
-            part = 0;
-        }
-
         $(".mytext").on("keydown", function(e){
             if (e.which == 13){
                 var text = $(this).val();
@@ -434,11 +418,9 @@ if (!isset($_SESSION['user'])) {
         }
 
         function newStory(elem) {
-          window.location.href = 'http://localhost/chatroom/the9to5/game-1.php';
+          window.location.href = 'http://localhost/chatroom/the9to5/game-4.php';
           part++;
           stage++;
-          //document.getElementById("1").removeEventListener("click", newStory);
-          //document.getElementById("2").removeEventListener("click", newStory);
         }
 
 
@@ -464,22 +446,15 @@ if (!isset($_SESSION['user'])) {
 
         //-- NOTE: No use time on insertChat.
 
-        function goBack() {
-          var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-          if (answer) {
-            window.location="http://localhost/chatroom/welcome.php";
-          }
-          else {
-            return false;
-          }
-           document.getElementById("goback").innerHTML = answer;
-        }
-
         function saveGame() {
-          alert("Your game has been saved!");
+          var url = "http://localhost/chatroom/the9to5/game-3.php";
+          var data1 = aCount;
+          var data2 = bCount;
+          $.post('test.php', {url: url, data1: data1, data2: data2}, function() {
+            alert("Your game has been saved.");
+          });
         }
 
-        resetChat();
         runChat();
         </script>
     </body>

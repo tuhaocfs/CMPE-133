@@ -8,7 +8,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 $myFile = "saveFile.txt";
-$lines = file($myFile);//file in to an array
+$lines = file($myFile); //file in to an array
 $a = $lines[1];
 $b = $lines[2];
 ?>
@@ -25,9 +25,6 @@ $b = $lines[2];
   <title>The 9 to 5</title>
   <link rel="icon" href="../images/favicon.ico">
   <style>
-  /*.mytext{
-      border:0;padding:10px;background:whitesmoke;
-  }*/
   body {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -63,8 +60,6 @@ $b = $lines[2];
       border-radius:5px;
       padding:5px;
       display:flex;
-
-
   }
   .textbox {
     width: 965px;
@@ -180,16 +175,13 @@ $b = $lines[2];
     float:right !important;
   }
 
+/* Scroll bar */
   ::-webkit-scrollbar {
     width: 10px;
   }
-
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #E0E0DE;
   }
-
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #E0E0DE;
   }
@@ -198,7 +190,6 @@ $b = $lines[2];
   .topnav {
     overflow: hidden;
     background-color: #20647B;
-    /*font: 'Montserrat', sans-serif;*/
     font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 57px;
   }
@@ -248,8 +239,8 @@ $b = $lines[2];
           <div class="rightnav">
             <a href="http://localhost/chatroom/logout.php">Logout</a>
             <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
-            <a href="#about"  onclick="saveGame()" id="save">Save</a>
-            <a class="active" href="#home">The 9 to 5</a>
+            <a href="#"  onclick="saveGame()" id="save">Save</a>
+            <a class="active" href="#">The 9 to 5</a>
           </div>
       </div>
     </div>
@@ -265,7 +256,6 @@ $b = $lines[2];
                       </div>
                     </div>
                     <div style="padding-top:3px; padding-left:135px;">
-                        <!--span class="glyphicon glyphicon-share-alt"></span-->
                          <img src="../images/send.jpg" alt="send btn">
                     </div>
                 </div>
@@ -273,7 +263,6 @@ $b = $lines[2];
             </div>
         </div>
         <script>
-        // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
         var aCount = <?php echo $a; ?>;
         var bCount = <?php echo $b; ?>;
@@ -308,7 +297,6 @@ $b = $lines[2];
         var part = 0;
         var stage = 0;
         var n = 100;
-        //var gameProgress = {stage: stage, part: part, a: aCount, b: bCount}; // game progress
 
         var peter = {};
         peter.avatar = "../images/boss.png";
@@ -377,14 +365,6 @@ $b = $lines[2];
 
         }
 
-        function resetChat(){
-            $("ul").empty();
-            // currently set to zero for debug
-            aCount = 0;
-            bCount = 0;
-            part = 0;
-        }
-
         $(".mytext").on("keydown", function(e){
             if (e.which == 13){
                 var text = $(this).val();
@@ -431,8 +411,6 @@ $b = $lines[2];
           window.location.href = 'http://localhost/chatroom/the9to5/game-2.php';
           part++;
           stage++;
-          //document.getElementById("1").removeEventListener("click", newStory);
-          //document.getElementById("2").removeEventListener("click", newStory);
         }
 
 
@@ -456,8 +434,6 @@ $b = $lines[2];
           runChat();
         }
 
-        //-- NOTE: No use time on insertChat.
-
         function saveGame() {
           var url = "http://localhost/chatroom/the9to5/game-1.php";
           var data1 = aCount;
@@ -467,7 +443,8 @@ $b = $lines[2];
           });
         }
 
-        resetChat();
+        //-- NOTE: No use time on insertChat.
+
         runChat();
         </script>
     </body>

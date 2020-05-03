@@ -183,7 +183,6 @@ if (!isset($_SESSION['user'])) {
   .topnav {
     overflow: hidden;
     background-color: #20647B;
-    /*font: 'Montserrat', sans-serif;*/
     font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     height: 57px;
   }
@@ -232,9 +231,9 @@ if (!isset($_SESSION['user'])) {
     </div>
       <div class="rightnav">
         <a href="http://localhost/chatroom/logout.php">Logout</a>
-        <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
-        <a href="#about"  onclick="saveGame()" id="save">Save</a>
-        <a class="active" href="#home">The 9 to 5</a>
+        <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
+        <a href="#"  onclick="saveGame()" id="save">Save</a>
+        <a class="active" href="#">The 9 to 5</a>
       </div>
   </div>
 </div>
@@ -257,11 +256,6 @@ if (!isset($_SESSION['user'])) {
         </div>
     </div>
     <script>
-    // scripts to be filled in
-    var aCount = 0;
-    var bCount = 0;
-    var nullCount = 0;
-    var episodes = 0;
     var gameScript = [ "Hey, boss. I’m sorry about what happened in the last meeting. ",
     "",
     "I know. I know. I promise I’ll do better.",
@@ -404,35 +398,11 @@ if (!isset($_SESSION['user'])) {
       runChat();
     }
 
-    //-- NOTE: No use time on insertChat.
-
-    function goBack() {
-      var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-      if (answer) {
-        window.location="http://localhost/chatroom/welcome.php";
-      }
-      else {
-        return false;
-      }
-       document.getElementById("goback").innerHTML = answer;
-    }
-
     function saveGame() {
-      <?php
-        $newA = "<script>aCount</script>";
-        $newB = "<script>bCount</script>";
-        $myfile = fopen("saveFile.txt", "w") or die("Unable to open file!");
-        fwrite($myfile, "http://localhost/chatroom/the9to5/game1.php"); // game url
-        fwrite($myfile, "\n");
-        fwrite($myfile, $newA); // a count
-        fwrite($myfile, "\n");
-        fwrite($myfile, $newB); // b count
-        fclose($myfile);
-      ?>
-      alert("Your game has been saved!");
+      alert("No need to save the game. This is the ending.");
     }
 
-    resetChat();
+    //-- NOTE: No use time on insertChat.
     runChat();
     </script>
 </body>

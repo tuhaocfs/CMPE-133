@@ -231,12 +231,12 @@ if (!isset($_SESSION['user'])) {
         <div class="leftnav">
           <a href="#">Chatroom Adventures</a>
         </div>
-          <div class="rightnav">
-            <a href="http://localhost/chatroom/logout.php">Logout</a>
-            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
-            <a href="#about"  onclick="saveGame()" id="save">Save</a>
-            <a class="active" href="#home">The 9 to 5</a>
-          </div>
+        <div class="rightnav">
+          <a href="http://localhost/chatroom/logout.php">Logout</a>
+          <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
+          <a href="#"  onclick="saveGame()" id="save">Save</a>
+          <a class="active" href="#">The 9 to 5</a>
+        </div>
       </div>
     </div>
         <div class="col-sm-3 col-sm-offset-4 frame">
@@ -260,10 +260,6 @@ if (!isset($_SESSION['user'])) {
         <script>
         // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
-        var aCount = 0;
-        var bCount = 0;
-        var nullCount = 0;
-        var episodes = 0;
         var gameScript = [ "Did you hear the results of the court-hearing?",
         "Mr. Pearson and the higher-ups of CIC are sentenced to life!",
         "",
@@ -408,24 +404,11 @@ if (!isset($_SESSION['user'])) {
           runChat();
         }
 
+        function saveGame() {
+          alert("No need to save the game. This is the ending.");
+        }
         //-- NOTE: No use time on insertChat.
 
-        function goBack() {
-          var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-          if (answer) {
-            window.location="http://localhost/chatroom/welcome.php";
-          }
-          else {
-            return false;
-          }
-           document.getElementById("goback").innerHTML = answer;
-        }
-
-        function saveGame() {
-          alert("Your game has been saved!");
-        }
-
-        resetChat();
         runChat();
         </script>
     </body>

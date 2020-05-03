@@ -249,7 +249,7 @@ $b = $lines[2];
             <a href="http://localhost/chatroom/logout.php">Logout</a>
             <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
             <a href="#" onclick="saveGame()" id="save">Save</a>
-            <a class="active" href="#home">The 9 to 5</a>
+            <a class="active" href="#">The 9 to 5</a>
           </div>
       </div>
     </div>
@@ -271,7 +271,6 @@ $b = $lines[2];
                 </div>
             </div>
         </div>
-        <textarea id="data" style="display:none;"></textarea>
         <script>
         // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
@@ -364,14 +363,6 @@ $b = $lines[2];
                     $("ul").append(control).scrollTop($("ul").prop('scrollHeight'));
                 }, time);
 
-        }
-
-        function resetChat(){
-            $("ul").empty();
-            // currently set to zero for debug
-            aCount = 0;
-            bCount = 0;
-            part = 0;
         }
 
         $(".mytext").on("keydown", function(e){
@@ -469,8 +460,8 @@ $b = $lines[2];
           $.post('test.php', {url: url, data1: data1, data2: data2}, function() {
             alert("Your game has been saved.");
           });
-        }
-        resetChat();
+        };
+
         runChat();
         </script>
     </body>
