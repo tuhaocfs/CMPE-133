@@ -8,6 +8,9 @@ if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+$myfile = fopen("the9to5/saveFile.txt", "r");
+$line = fgets($myfile);
+fclose($myfile);
 ?>
 
 <!-- Original Code from Yenni Lam https://repl.it/@yennilam/webCamS-->
@@ -170,8 +173,8 @@ footer{
       <h5 class="card-title">The 9 to 5</h5>
       <p class="card-text">You're a newly hired intern working for The Collective Intelligence Company (CIC). CIC believes the best way to advance is to make sure everything is in order and everyone is collaborating well. That's sounds pretty great, until...</p>
       <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
-       <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary" id = "start" onclick="changeProgress(this)">Start Game</a>
-       <a href="" class="btn btn-primary btn-md pull-right" id = "continue" onclick="changeProgress(this)">Continue Game</a>
+       <a href="http://localhost/chatroom/the9to5/game.php" class="btn btn-primary" id = "start" onclick="startOver()">Start Game</a>
+       <a href="<?php echo $line; ?>" class="btn btn-primary btn-md pull-right" id = "continue" onclick="resume()">Continue Game</a>
      </div>
     </div>
   </div>
@@ -207,49 +210,24 @@ footer{
 <footer>
   <p class="footp">This webpage belongs to CMPE 133 Team 1 @ SJSU. This project is licensed under the MIT License.</p>
 </footer>
-</body>
 <script>
-var startLink = "http://localhost/chatroom/the9to5/game.php";
-var continueLink = "";
-var state;
-var aCount;
-var bCount;
 
-function reset() {
-  localStorage.setItem(continueLink, startLink);
-  localStorage.setItem(state, 0);
-  localStorage.setItem(aCount, 0);
-  localStorage.setItem(bCount, 0);
+function startOver() {
+  <?php
+    $myfile = fopen("the9to5/saveFile.txt", "w") or die("Unable to open file!");
+    fwrite($myfile, "http://localhost/chatroom/the9to5/game.php"); // game url
+    fwrite($myfile, "\n");
+    fwrite($myfile, 0); // a count
+    fwrite($myfile, "\n");
+    fwrite($myfile, 0); // b count
+    fclose($myfile);
+  ?>
 }
 
-function getCurrentProg() {
-    localStorage.getItem("continueLink");
-}
+function resume() {
 
-function changeProgress(elem) {
-  switch(elem.id) {
-    case 'start':
-      reset();
-    break;
-
-    case '2':
-      getCurrentProg();
-    break;
-  }
-
-function setLinks(){
-     var all_links = document.getElementById("container").innerHTML;
-     localStorage.setItem("savedLinkHTML", all_links);
-}
-function getLinks(){
-    var all_links = localStorage.getItem("savedLinkHTML");
-    if(all_links) document.getElementById("container").innerHTML = all_links;
-}
-window.onload = function(){
-    getLinks();
-}
-window.onunload = function(){
-    setLinks();
 }
 </script>
+</body>
+
 </html>

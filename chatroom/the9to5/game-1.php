@@ -6,6 +6,11 @@ if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+
+$myFile = "saveFile.txt";
+$lines = file($myFile);//file in to an array
+$a = $lines[1];
+$b = $lines[2];
 ?>
 <!-- game code based on https://bootsnipp.com/tags/chat-->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -242,7 +247,7 @@ if (!isset($_SESSION['user'])) {
         </div>
           <div class="rightnav">
             <a href="http://localhost/chatroom/logout.php">Logout</a>
-            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
+            <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
             <a href="#about"  onclick="saveGame()" id="save">Save</a>
             <a class="active" href="#home">The 9 to 5</a>
           </div>
@@ -269,11 +274,9 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script>
         // scripts to be filled in
-        var playerName = '<?php echo $_SESSION['user'];?>';
-        var aCount = 0;
-        var bCount = 0;
-        var nullCount = 0;
-        var episodes = 0;
+        var playerName = '<?php echo $_SESSION['pname'];?>';
+        var aCount = <?php echo $a; ?>;
+        var bCount = <?php echo $b; ?>;
         var gameScript = [
           "", playerName + ". I was going to ask you to send those to me.",
           "I’m glad that you are working efficiently. Say, how do you like the company so far? ",
@@ -302,8 +305,6 @@ if (!isset($_SESSION['user'])) {
           "I'll get back to you after lunch.",
           "I’ve talked to him during lunch. He’s pretty cool.",
           "Go to Episode 2"];
-        var playerEndingA = [];
-        var playerEndingB = [];
         var part = 0;
         var stage = 0;
         var n = 100;
@@ -457,19 +458,13 @@ if (!isset($_SESSION['user'])) {
 
         //-- NOTE: No use time on insertChat.
 
-        function goBack() {
-          var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-          if (answer) {
-            window.location="http://localhost/chatroom/welcome.php";
-          }
-          else {
-            return false;
-          }
-           document.getElementById("goback").innerHTML = answer;
-        }
-
         function saveGame() {
-          alert("Your game has been saved!");
+          var url = "http://localhost/chatroom/the9to5/game-1.php";
+          var data1 = aCount;
+          var data2 = bCount;
+          $.post('test.php', {url: url, data1: data1, data2: data2}, function() {
+            alert("Your game has been saved.");
+          });
         }
 
         resetChat();

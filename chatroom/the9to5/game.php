@@ -6,12 +6,17 @@ if (!isset($_SESSION['user'])) {
   header('location:login.php');
   exit();
 }
+$myFile = "saveFile.txt";
+$lines = file($myFile);//file in to an array
+$a = $lines[1];
+$b = $lines[2];
 ?>
 <!-- game code based on https://bootsnipp.com/tags/chat-->
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
@@ -242,8 +247,8 @@ if (!isset($_SESSION['user'])) {
         </div>
           <div class="rightnav">
             <a href="http://localhost/chatroom/logout.php">Logout</a>
-            <a href="http://localhost/chatroom/welcome.php" onclick="return goBack()" id="goback">Go Back</a>
-            <a href="#about"  onclick="saveGame()" id="save">Save</a>
+            <a href="http://localhost/chatroom/welcome.php" id="goback">Go Back</a>
+            <a href="#" onclick="saveGame()" id="save">Save</a>
             <a class="active" href="#home">The 9 to 5</a>
           </div>
       </div>
@@ -264,16 +269,14 @@ if (!isset($_SESSION['user'])) {
                          <img src="../images/send.jpg" alt="send btn">
                     </div>
                 </div>
-
             </div>
         </div>
+        <textarea id="data" style="display:none;"></textarea>
         <script>
         // scripts to be filled in
         var playerName = '<?php echo $_SESSION['pname'];?>';
-        var aCount = 0;
-        var bCount = 0;
-        var nullCount = 0;
-        var episodes = 0;
+        var aCount = <?php echo $a; ?>;
+        var bCount = <?php echo $b; ?>;
         var gameScript = [
           "Hello, " + playerName + ".",
           "Welcome to the Collective Intelligence Company, or CIC for short. We are so excited to have you here with us.",
@@ -446,22 +449,27 @@ if (!isset($_SESSION['user'])) {
         }
 
         //-- NOTE: No use time on insertChat.
-
+/*
         function goBack() {
-          var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
-          if (answer) {
+          //var answer = confirm ("Did you save yet? Press OK if you want to go back or Cancel to resume your game.");
+          //if (answer) {
             window.location="http://localhost/chatroom/welcome.php";
-          }
-          else {
-            return false;
-          }
+          //}
+          //else {
+            //return false;
+          //}
            document.getElementById("goback").innerHTML = answer;
-        }
+        }*/
+
 
         function saveGame() {
-          alert("Your game has been saved!");
+          var url = "http://localhost/chatroom/the9to5/game.php";
+          var data1 = aCount;
+          var data2 = bCount;
+          $.post('test.php', {url: url, data1: data1, data2: data2}, function() {
+            alert("Your game has been saved.");
+          });
         }
-
         resetChat();
         runChat();
         </script>

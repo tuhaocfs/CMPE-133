@@ -269,7 +269,7 @@ if (!isset($_SESSION['user'])) {
         </div>
         <script>
         // scripts to be filled in
-        var playerName = '<?php echo $_SESSION['user'];?>';
+        var playerName = '<?php echo $_SESSION['pname'];?>';
         var aCount = 0;
         var bCount = 0;
         var nullCount = 0;

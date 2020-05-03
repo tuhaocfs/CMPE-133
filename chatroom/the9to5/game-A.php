@@ -258,7 +258,6 @@ if (!isset($_SESSION['user'])) {
     </div>
     <script>
     // scripts to be filled in
-    var playerName = '<?php echo $_SESSION['user'];?>';
     var aCount = 0;
     var bCount = 0;
     var nullCount = 0;
@@ -419,6 +418,17 @@ if (!isset($_SESSION['user'])) {
     }
 
     function saveGame() {
+      <?php
+        $newA = "<script>aCount</script>";
+        $newB = "<script>bCount</script>";
+        $myfile = fopen("saveFile.txt", "w") or die("Unable to open file!");
+        fwrite($myfile, "http://localhost/chatroom/the9to5/game1.php"); // game url
+        fwrite($myfile, "\n");
+        fwrite($myfile, $newA); // a count
+        fwrite($myfile, "\n");
+        fwrite($myfile, $newB); // b count
+        fclose($myfile);
+      ?>
       alert("Your game has been saved!");
     }
 
