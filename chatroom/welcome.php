@@ -185,8 +185,8 @@ footer{
       <h5 class="card-title">The Three Little Pigs</h5>
       <p class="card-text">A classic twist on the nursery tale "The Three Little Pigs". You're the third little piggy trying to build the best house possible- but it's not as easy as it looks. And with a looming threat coming in, would you and your house be able to survive?</p>
       <div class= "play-button" style="margin: 0 auto; width: 420px; text-align: center;">
-       <a href="#putyourlinkhere" class="btn btn-primary">Start Game</a>
-       <a href="#putyourlinkhere" class="btn btn-primary btn-md pull-right">Continue Game</a>
+       <!--a href="http://localhost/chatroom/threeLittlePig/ThreePigs.html" class="btn btn-primary">Start Game</a-->
+       <a href="http://localhost/chatroom/ThreePigs.html" class="btn btn-primary btn-md pull-right">Start Game</a>
      </div>
     </div>
 <!--     <div class="card-footer">
