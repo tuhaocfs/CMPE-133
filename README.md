@@ -3,16 +3,24 @@
 ## Authors: Dhirtitapa "Risha" Ray, Uyen Nguyen (Team Leader), Brian Albert Redoloza, Yenni Lam 
 ### Project Introduction
 Choose Your Own Adventure, or Secret Path Books, are book-based games where the player is the protagonist who chooses which game choice to progress the game. In 1969, a lawyer named Edward Packard came up with the concept as a way to tell stories to his children and created the first known Choose Your Own Adventure book called *Sugarcane Island*. It wasn't until a decade later when the book finally gained some traction and this genre of storytelling evolved from books to video games. Video Games such as "The Stanley Parable" and the "Life is Strange" franchise brought this niche genre into a different industry. Simple, text-based approaches are still prominent in web applications and can be found with a simple Google search. Our project involves creating a web application for a Choose Your Own Adventure Game that allows the user to save their game data and create an account to do so. 
-#### Functional Requirements
-* Allow the user to login and logout of their account at any time
-* Allow the user to create an account and store the credentials in a database
-* Allow the user to play the game in its full potential
-* Allow the user to save their progress at any time and load it at any time
-#### Nonfunctional Requirements
-* The frontend of the project is written in HTML/CSS and JavaScript. 
-* The backend of the project is written in Java
-* The database will be stored using MySQL
-* The game's story is engaging for the user
+#### Essential / Functional Requirements
+* The user can create an account
+* The user's account is recorded into a database. 
+* The user can log in and log out of the game. 
+* The user can save their status on the game and load it. 
+* The user can play the game through the UI. 
+#### Desired / Non-functional Requirements
+* The game has at least two endings. 
+* The game's story tells an engaging and interactive story. 
+* The game is saved through a String approach via the database. 
+* Front End: HTML, CSS, Javascript. 
+* Backend: Java. 
+* Database: MySQL.
+#### Optional Requirements
+* The user can choose from more than two options during the game. 
+* The application can allow more than one game to be played. 
+* The user can choose their avatars. 
+* The user can create multiple save files. 
 #### More information regarding our requirements and documentation can be found under the folder project-slides
 ### Set-Up
 #### WAMP
@@ -24,10 +32,10 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 3. Go to the local host either through your browser, or through clicking "Go to Application" on XAMPP.
 ### How To Run The Project
 1. Make sure the server is running. 
-2. Go to http://localhost/chatroom/login.php to view the application. 
-3. Go to http://localhost/phpmyadmin/ to view the MySQL database. To log into the root, see the credentials in the registration.php file. 
-4. Once you are done running the application, simply shut down the server. 
-5. **Do not close the terminal right away. Wait for the application to shut down before exiting.** 
+2. Make sure all all links in every file match your localhost name. The code is set up to have the localhost name "localhost" 
+3. Go to http://{your localhost name}/chatroom/login.php to view the application. 
+4. Go to http://{your localhost name}/phpmyadmin/ to view the MySQL database. To log into the root, see the credentials in the registration.php file. 
+5. Once you are done running the application, simply shut down the server. 
 ### Application Features
 #### Register: 
       To access the web app, a user must have an account. New users can create their own personal accounts by entering their username, a valid email address, and a password. Once registered, the user's credentials are saved via MySQL Database and will allow the user to login at any time.
@@ -38,8 +46,7 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 #### Logout: 
       Users who are logged into the web app are given the option to log out. Logging out will save the current game until the next login via database. 
   
-### Built With
- - Java : An interpreted, high-level, general-purpose programming language.
+### Built With: 
  - JQuery - A fast, small, and feature-rich JavaScript library.
  - Bootstrap - Responsive, mobile-first projects on the web with the world's most popular front-end component library
  - PHP: A general-purpose scripting language that is especially suited to web development. 
