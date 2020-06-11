@@ -1,4 +1,0 @@
-0:0:0:0:0:0:0:1 - - [23/Mar/2020:22:50:22 -0700] "GET /chatroom/homepage.html HTTP/1.1" 200 2357
-0:0:0:0:0:0:0:1 - - [23/Mar/2020:22:50:29 -0700] "GET /chatroom/haha.html? HTTP/1.1" 404 731
-0:0:0:0:0:0:0:1 - - [23/Mar/2020:22:50:33 -0700] "GET /chatroom/haha2.html? HTTP/1.1" 404 732
-0:0:0:0:0:0:0:1 - - [23/Mar/2020:22:50:36 -0700] "GET /chatroom/haha3.html? HTTP/1.1" 404 732

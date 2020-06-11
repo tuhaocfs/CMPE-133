@@ -1,5 +1,0 @@
-2020-02-20T02:14:20.158674Z 0 [System] [MY-013169] [Server] C:\Users\brian\Desktop\myWebProject\mysql\bin\mysqld.exe (mysqld 8.0.19) initializing of server in progress as process 4756
-2020-02-20T02:14:20.165027Z 0 [ERROR] [MY-010457] [Server] --initialize specified but the data directory has files in it. Aborting.
-2020-02-20T02:14:20.166677Z 0 [ERROR] [MY-013236] [Server] The designated data directory C:\Users\brian\Desktop\myWebProject\mysql\data\ is unusable. You can remove all files that the server added to it.
-2020-02-20T02:14:20.176928Z 0 [ERROR] [MY-010119] [Server] Aborting
-2020-02-20T02:14:20.178439Z 0 [System] [MY-010910] [Server] C:\Users\brian\Desktop\myWebProject\mysql\bin\mysqld.exe: Shutdown complete (mysqld 8.0.19)  MySQL Community Server - GPL.
