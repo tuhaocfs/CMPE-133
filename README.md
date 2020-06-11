@@ -52,7 +52,7 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
 1. Verify that XAMPP can be run by your computer and other applications such as MySQL is installed, and select proper version of PHP
 2. Start XAMPP, and start the stack services, which include ProFTPD, Apache, and MySQL. Under network, run the localhost server of your choice, but make sure it matches with the server you specify in your files. Mount the /opt/lampp data volume, and click on explore, where you have all the files. Place files within htdocs. 
 3. Go to the local host either through your browser, or through clicking "Go to Application" on XAMPP.
-### How To Run The Project
+### How To Run The Project:
 1. Make sure the server is running. 
 2. Make sure all all links in every file match your localhost name. The code is set up to have the localhost name "localhost" 
 3. Go to http://{your localhost name}/chatroom/login.php to view the application. 
@@ -80,9 +80,9 @@ Choose Your Own Adventure, or Secret Path Books, are book-based games where the 
  - Bootstrap - Responsive, mobile-first projects on the web with the world's most popular front-end component library
  - PHP: A general-purpose scripting language that is especially suited to web development. 
 
-### Previous Works, Files, and Progresses
+### Previous Works, Files, and Progresses:
 
-https://drive.google.com/drive/folders/150cIXWHQSqnj5Ptbn8ynMikBeSiMd4JI?usp=sharing
+To view our previous files that were initially used in our project, click here: https://drive.google.com/drive/folders/150cIXWHQSqnj5Ptbn8ynMikBeSiMd4JI?usp=sharing
 
 ## License
 
